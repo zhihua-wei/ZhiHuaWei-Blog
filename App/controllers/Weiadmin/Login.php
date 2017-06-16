@@ -29,7 +29,6 @@ class Login extends CI_Controller {
 //        exit;
 
 
-
         $data['setting'] = $this -> wei -> get_setting();
         //判断是否已登录
         $flag = false;
