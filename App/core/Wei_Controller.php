@@ -23,7 +23,6 @@ class Home_Controller extends CI_Controller
     {
         parent::__construct();
         $this->load->set_home_view_dir();
-
     }
 
 }
