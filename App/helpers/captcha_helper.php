@@ -1,15 +1,15 @@
 <?php
 
 /**
- * ==========================================
- * Created by Pocket Knife Technology.
- * Author: ZhiHua_W <zhihua_wei@foxmail.com>
- * Date: 2016/11/02 0031
+ * ====================================================
+ * Created by ZHI HUA WEI.
+ * Author: ZhiHua_Wei <zhihua_wei@foxmail.com>
+ * Date: 2017/6/16
  * Time: 上午 9:23
- * Project: Weiadmin后台管理系统
+ * Project: ZhiHuaWei-Blog 系统
  * Version: 1.0.0
  * Power:  验证码辅助函数扩展
- * ==========================================
+ * ====================================================
  */
 
 defined('BASEPATH') OR exit('No direct script access allowed');
