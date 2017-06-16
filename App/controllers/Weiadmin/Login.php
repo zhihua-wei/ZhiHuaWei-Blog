@@ -24,9 +24,9 @@ class Login extends CI_Controller {
      * 登录首页
      */
     public function index() {
-        var_dump(111122222);
-
-        exit;
+//        var_dump(111122222);
+//
+//        exit;
 
 
 
