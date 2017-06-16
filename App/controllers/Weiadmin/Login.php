@@ -25,6 +25,7 @@ class Login extends CI_Controller {
      */
     public function index() {
         var_dump(1111);
+
         exit;
 
 
