@@ -1,7 +1,7 @@
 <?php
 
 /**
- * ==========================================
+ * ====================================================
  * Created by ZHI HUA WEI.
  * Author: ZhiHua_Wei <zhihua_wei@foxmail.com>
  * Date: 2017/06/16 0031
@@ -9,7 +9,7 @@
  * Project: ZhiHuaWei-Blog 系统
  * Version: 1.0.0
  * Power:  控制器扩展
- * ==========================================
+ * ====================================================
  */
 
 defined('BASEPATH') OR exit('No direct script access allowed');
