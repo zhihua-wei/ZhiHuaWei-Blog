@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  | a PHP script and you can easily do that on your own.
  |
  */
-$config['base_url'] = 'http://localhost/Pkadmin/';
+$config['base_url'] = 'http://localhost/ZhiHuaWei/';
 
 /*
  |--------------------------------------------------------------------------
@@ -114,7 +114,7 @@ $config['enable_hooks'] = FALSE;
  | https://codeigniter.com/user_guide/general/creating_libraries.html
  |
  */
-$config['subclass_prefix'] = 'PK_';
+$config['subclass_prefix'] = 'Wei_';
 
 /*
  |--------------------------------------------------------------------------
@@ -368,7 +368,7 @@ $config['encryption_key'] = '';
  |
  */
 $config['sess_driver'] = 'files';
-$config['sess_cookie_name'] = 'pk_session';
+$config['sess_cookie_name'] = 'wei_session';
 $config['sess_expiration'] = 7200;
 $config['sess_save_path'] = NULL;
 $config['sess_match_ip'] = FALSE;
