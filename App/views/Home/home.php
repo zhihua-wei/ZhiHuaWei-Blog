@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 !DOCTYPE html><html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PKADMIN-小刀科技</title>
+		<title>Weiadmin-小刀科技</title>
 
 		<style type="text/css">::selection {
 	background-color: #E13300;
@@ -72,7 +72,7 @@ p.footer {
 	<body>
 
 		<div id="container">
-			<h1>Welcome to PKADMIN!</h1>
+			<h1>Welcome to Weiadmin!</h1>
 
 			<div id="body">
 				<p>
@@ -92,12 +92,12 @@ p.footer {
 				application/controllers/Home/Pkhome.php</code>
 
 				<p>
-					Thank you for using PKADMIN System
+					Thank you for using Weiadmin System
 				</p>
 			</div>
 
 			<p class="footer">
-				PKADMIN VERSION 1.0.0
+				Weiadmin VERSION 1.0.0
 			</p>
 		</div>
 

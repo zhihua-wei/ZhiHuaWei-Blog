@@ -45,7 +45,7 @@
 									<nav class="navbar navbar-default">
 										<form class=" navbar-form form-inline " role="search ">
 											<div class="form-group pull-right ">
-												<a href="<?php echo site_url('Pkadmin/Authgroup/add')?>" class="btn btn-primary pull-right "><i class="fa fa-plus "></i>添加角色</a>
+												<a href="<?php echo site_url('Weiadmin/Authgroup/add')?>" class="btn btn-primary pull-right "><i class="fa fa-plus "></i>添加角色</a>
 											</div>
 										</form>
 									</nav>
@@ -76,8 +76,8 @@
 													<?php echo $item['note'];?>
 												</td>
 												<td class="text-center ">													
-													<?php if($item['id'] != 1) echo '<a href='.site_url('Pkadmin/Authgroup/edit').'/'.$item['id'].' class="btn btn-primary btn-xs" title="修改"><li class="fa fa-pencil"></li></a>'; else echo '<button class="btn btn-default btn-xs" title="禁止操作"><li class="fa fa-ban"></li></button>'?>
-													<?php if($item['id'] != 1) echo '<a val='.site_url('Pkadmin/Authgroup/del').'/'.$item['id'].' class="btn btn-danger btn-xs del" title="删除"><li class="fa fa-trash-o"></li></a>';?>
+													<?php if($item['id'] != 1) echo '<a href='.site_url('Weiadmin/Authgroup/edit').'/'.$item['id'].' class="btn btn-primary btn-xs" title="修改"><li class="fa fa-pencil"></li></a>'; else echo '<button class="btn btn-default btn-xs" title="禁止操作"><li class="fa fa-ban"></li></button>'?>
+													<?php if($item['id'] != 1) echo '<a val='.site_url('Weiadmin/Authgroup/del').'/'.$item['id'].' class="btn btn-danger btn-xs del" title="删除"><li class="fa fa-trash-o"></li></a>';?>
 												</td>
 											</tr>
 											<?php endforeach;?>

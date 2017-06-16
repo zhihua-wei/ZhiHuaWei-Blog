@@ -6,7 +6,7 @@
  * Author: ZhiHua_W <zhihua_wei@foxmail.com>
  * Date: 2016/11/21 0020
  * Time: 上午 11:42
- * Project: Pkadmin后台管理系统
+ * Project: Weiadmin后台管理系统
  * Version: 1.0.0
  * Power: 用户及组模型
  * ==========================================

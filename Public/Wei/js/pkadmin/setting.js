@@ -4,7 +4,7 @@
  * Author: ZhiHua_W <zhihua_wei@foxmail.com>
  * Date: 2016/11/14 0018
  * Time: 上午 10:02
- * Project: Pkadmin后台管理系统
+ * Project: Weiadmin后台管理系统
  * Version: 1.0.0
  * Power: setting.js
  * ==========================================

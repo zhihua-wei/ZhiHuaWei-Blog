@@ -6,7 +6,7 @@
  * Author: ZhiHua_W <zhihua_wei@foxmail.com>
  * Date: 2016/11/05 0011
  * Time: 下午 4:59
- * Project: Pkadmin后台管理系统
+ * Project: Weiadmin后台管理系统
  * Version: 1.0.0
  * Power: 权限验证模型
  * ==========================================

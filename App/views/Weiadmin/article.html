@@ -45,7 +45,7 @@
 									<nav class="navbar navbar-default">
 										<form class=" navbar-form form-inline " role="search ">
 											<div class="form-group pull-right ">
-												<a href="<?php echo site_url('Pkadmin/Article/add');?>" class="btn btn-primary pull-right "><i class="fa fa-plus "></i>新增文章</a>
+												<a href="<?php echo site_url('Weiadmin/Article/add');?>" class="btn btn-primary pull-right "><i class="fa fa-plus "></i>新增文章</a>
 											</div>
 										</form>
 									</nav>
@@ -80,10 +80,10 @@
 													<?php echo date("Y-m-d H:i:s",$item['issue_time']);?>
 												</td>
 												<td class="text-center ">
-													<a href="<?php echo site_url('Pkadmin/Article/edit').'/'.$item['article_id'];?>" class="btn btn-primary btn-xs" title="修改">
+													<a href="<?php echo site_url('Weiadmin/Article/edit').'/'.$item['article_id'];?>" class="btn btn-primary btn-xs" title="修改">
 														<li class="fa fa-pencil"></li>
 													</a>
-													<a val="<?php echo site_url('Pkadmin/Article/del').'/'.$item['article_id'];?>" class="btn btn-danger btn-xs del" title="删除">
+													<a val="<?php echo site_url('Weiadmin/Article/del').'/'.$item['article_id'];?>" class="btn btn-danger btn-xs del" title="删除">
 														<li class="fa fa-trash-o"></li>
 													</a>
 												</td>

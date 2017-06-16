@@ -3,11 +3,11 @@
 
 	<head>
 		<!-- BEGIN META -->
-		<?php $this->load->view('Pkadmin/Public/headmeta.html');?>
+		<?php $this->load->view('Weiadmin/Public/headmeta.html');?>
 		<!-- END META -->
 		
 		<!-- BEGIN STYLESHEET-->
-		<?php $this->load->view('Pkadmin/Public/headcss.html');?>
+		<?php $this->load->view('Weiadmin/Public/headcss.html');?>
 		<!-- END STYLESHEET-->
 		<title>
 			<?php echo $setting['title'].' Power by '.$setting['sitename'];?>
@@ -18,7 +18,7 @@
 	<body class="login-screen">
 		<!-- BEGIN SECTION -->
 		<div class="container">
-			<form class="form-signin" action="<?php echo site_url('Pkadmin/Login/singin');?>" method="post">
+			<form class="form-signin" action="<?php echo site_url('Weiadmin/Login/singin');?>" method="post">
 				<h2 class="form-signin-heading"><?php echo $setting['title'];?></h2>
 				<!-- LOGIN WRAPPER  -->
 				<div class="login-wrap">
@@ -28,7 +28,7 @@
 						<span class="inline">
 							<input type="text" name="verify_code" id="verify_code" class="form-control w-150" placeholder="Verification Code">
 						</span>
-						<img src="<?php echo site_url('Pkadmin/Login/verify_code');?>" alt="" onclick= this.src="<?php echo site_url('Pkadmin/Login/verify_code').'/'?>"+Math.random() style="cursor: pointer;" title="看不清？点击更换另一个验证码。"/>
+						<img src="<?php echo site_url('Weiadmin/Login/verify_code');?>" alt="" onclick= this.src="<?php echo site_url('Weiadmin/Login/verify_code').'/'?>"+Math.random() style="cursor: pointer;" title="看不清？点击更换另一个验证码。"/>
 					</span>
 					<label class="checkbox">
             			<input type="checkbox" name="remember">Remember me
@@ -37,7 +37,7 @@
 						Sign in
 					</button>
 					<p>
-						Thank you for using PKADMIN System
+						Thank you for using Weiadmin System
 					</p>
 				</div>
 				<!-- END LOGIN WRAPPER -->
@@ -51,8 +51,8 @@
 		<!-- BOOTSTRAP JS -->
 		<script src="<?php echo base_url('Public/js/layer/layer.js');?>"></script>
 		<!-- LATER JS -->
-		<script src="<?php echo base_url('Public/js/pkadmin/login.js');?>"></script>
-		<!-- PKADMIN LOGIN JS -->
+		<script src="<?php echo base_url('Public/js/Weiadmin/login.js');?>"></script>
+		<!-- Weiadmin LOGIN JS -->
 		<!-- END JS -->
 	</body>
 

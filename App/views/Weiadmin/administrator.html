@@ -43,7 +43,7 @@
 								<div class="panel-body">
 									<!-- BEGIN DIV FORM -->
 									<div class="form navbar navbar-default">
-										<form class="form-horizontal" role="form" action="<?php echo site_url('Pkadmin/Administrator/index');?>" method="post">
+										<form class="form-horizontal" role="form" action="<?php echo site_url('Weiadmin/Administrator/index');?>" method="post">
 											<div class="form-group m-bot0 m-top15">
 												<label class="col-xs-1 control-label">关键字</label>
 												<div class="col-xs-3">
@@ -96,10 +96,10 @@
 													<?php echo $item['email'];?>
 												</td>
 												<td class="text-center">
-													<a href="<?php echo site_url('Pkadmin/Administrator/edit').'/'.$item['admin_id'];?>" class="btn btn-primary btn-xs" title="修改">
+													<a href="<?php echo site_url('Weiadmin/Administrator/edit').'/'.$item['admin_id'];?>" class="btn btn-primary btn-xs" title="修改">
 														<li class="fa fa-pencil"></li>
 													</a>
-													<?php if($item['admin_id'] != 1) echo '<a val='.site_url('Pkadmin/Administrator/del').'/'.$item['admin_id'].' class="btn btn-danger btn-xs del" title="删除"><li class="fa fa-trash-o"></li></a>';?>
+													<?php if($item['admin_id'] != 1) echo '<a val='.site_url('Weiadmin/Administrator/del').'/'.$item['admin_id'].' class="btn btn-danger btn-xs del" title="删除"><li class="fa fa-trash-o"></li></a>';?>
 
 													<!--<a val="<?php echo site_url('Weiadmin/Administrator/del').'/'.$item['admin_id'];?>" class="btn btn-danger btn-xs del" title="删除">
 														<li class="fa fa-trash-o"></li>

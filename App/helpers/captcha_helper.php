@@ -6,7 +6,7 @@
  * Author: ZhiHua_W <zhihua_wei@foxmail.com>
  * Date: 2016/11/02 0031
  * Time: 上午 9:23
- * Project: Pkadmin后台管理系统
+ * Project: Weiadmin后台管理系统
  * Version: 1.0.0
  * Power:  验证码辅助函数扩展
  * ==========================================
