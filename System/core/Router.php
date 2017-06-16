@@ -274,6 +274,7 @@ class CI_Router
             show_error('Unable to determine what should be displayed. A default route has not been specified in the routing file.');
         }
 
+        //20170616 ZHIHUAWEI 修改
         /* 修改默认控制器支持  子目录/控制器/方法  start.... */
         $temp = explode('/', $this->default_controller);
         //如果是三个值（形如 $route['default_controller'] = "index/home/index"; ）就做处理
@@ -294,7 +295,6 @@ class CI_Router
                 2 => $class,
                 3 => $method
             );
-
             log_message('debug', 'No URI present. Default controller set.');
             return;//返回，不再往下走
         }
