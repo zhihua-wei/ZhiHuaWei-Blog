@@ -36,7 +36,7 @@ class Setting extends Wei_Controller
             $this->setting->update_site_setting($params);
             $this->wei->add_log('修改网站配置信息！', $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
             $success['msg'] = "网站信息设置成功！";
-            $success['url'] = site_url("Pkadmin/Setting/setting");
+            $success['url'] = site_url("Weiadmin/Setting/setting");
             $success['wait'] = 3;
             $data['success'] = $success;
             $this->load->view('success.html', $data);
