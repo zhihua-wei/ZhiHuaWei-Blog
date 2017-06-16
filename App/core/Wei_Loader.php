@@ -14,7 +14,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class PK_Loader extends CI_Loader {
+class Wei_Loader extends CI_Loader {
 
 	/**
 	 * 设置前台视图路径

@@ -28,7 +28,7 @@ class Home_Controller extends CI_Controller {
 /**
  * 后台父类控制器
  */
-class Pkadmin_Controller extends CI_Controller {
+class Wei_Controller extends CI_Controller {
 
 	public $data;
 
