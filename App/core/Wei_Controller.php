@@ -19,6 +19,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Home_Controller extends CI_Controller
 {
+    /**
+     * @var $homedata 前台全局变量
+     */
+    public $homedata;
+
     public function __construct()
     {
         parent::__construct();
