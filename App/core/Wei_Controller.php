@@ -22,7 +22,7 @@ class Home_Controller extends CI_Controller
     /**
      * @var $homedata 前台全局变量
      */
-    public $homedata;
+    public $homeData;
 
     public function __construct()
     {
