@@ -2,11 +2,11 @@
 
 /**
  * ==========================================
- * Created by Pocket Knife Technology.
- * Author: ZhiHua_W <zhihua_wei@foxmail.com>
- * Date: 2016/11/02 0031
- * Time: 上午 9:19
- * Project: Pkadmin后台管理系统
+ * Created by ZHI HUA WEI.
+ * Author: ZhiHua_Wei <zhihua_wei@foxmail.com>
+ * Date: 2017/06/16 0032
+ * Time: 上午 9:24
+ * Project: ZhiHuaWei-Blog 系统
  * Version: 1.0.0
  * Power:  加载器扩展
  * ==========================================
