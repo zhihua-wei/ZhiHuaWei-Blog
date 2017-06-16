@@ -101,4 +101,4 @@ define('HOME_VIEW_DIR', 'views/Home/');
 //定义后台视图路径常量
 define('ADMIN_VIEW_DIR', 'views/Weiadmin/');
 //版本
-define('VERSION', '1.0.0');
+define('Weiadmin_VERSION', '1.0.0');
