@@ -1,15 +1,15 @@
 <?php
 
 /**
- * ==========================================
- * Created by Pocket Knife Technology.
- * Author: ZhiHua_W <zhihua_wei@foxmail.com>
- * Date: 2016/11/05 0011
+ * ====================================================
+ * Created by ZHI HUA WEI.
+ * Author: ZhiHua_Wei <zhihua_wei@foxmail.com>
+ * Date: 2017/6/16
  * Time: 下午 4:59
- * Project: Weiadmin后台管理系统
+ * Project: ZhiHuaWei-Blog 系统
  * Version: 1.0.0
  * Power: 权限验证模型
- * ==========================================
+ * ====================================================
  */
 
 /**
