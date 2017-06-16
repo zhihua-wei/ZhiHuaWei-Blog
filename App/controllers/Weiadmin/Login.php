@@ -24,11 +24,6 @@ class Login extends CI_Controller {
      * 登录首页
      */
     public function index() {
-//        var_dump(111122222);
-//
-//        exit;
-
-
         $data['setting'] = $this -> wei -> get_setting();
         //判断是否已登录
         $flag = false;

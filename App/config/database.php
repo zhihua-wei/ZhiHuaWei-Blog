@@ -80,7 +80,7 @@ $db['default'] = array(
 	'password' => 'root',
 	'database' => 'zhihuawei',
 	'dbdriver' => 'mysql',
-	'dbprefix' => 'wei_',
+	'dbprefix' => 'zhw_',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
