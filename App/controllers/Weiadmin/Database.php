@@ -7,7 +7,7 @@
  * Time: 18:00
  * Project: ZhiHuaWei-Blog 系统
  * Version: 1.0.0
- * Power:  后台管理员管理控制器
+ * Power:  数据库管理控制器
  * ====================================================
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
