@@ -99,6 +99,6 @@ defined('EXIT__AUTO_MAX') OR define('EXIT__AUTO_MAX', 125);
 //定义前台视图路径常量
 define('HOME_VIEW_DIR', 'views/Home/');
 //定义后台视图路径常量
-define('ADMIN_VIEW_DIR', 'views/Pkadmin/');
+define('ADMIN_VIEW_DIR', 'views/Weiadmin/');
 //版本
 define('PKADMIN_VERSION', '1.0.0');
