@@ -41,12 +41,12 @@ class Wei_Controller extends CI_Controller
     /**
      * @var array 后台全局变量
      */
-	public $weidata;
+	public $weiData;
 
 	public function __construct() {
 		parent::__construct();
 		$this -> load -> set_admin_view_dir();
-		$this -> weidata['setting'] = $this -> wei -> get_setting();
+		$this -> weiData['setting'] = $this -> wei -> get_setting();
 		//判断是否已登录
 		$flag = false;
 		$auth = get_cookie('auth');
@@ -95,9 +95,9 @@ class Wei_Controller extends CI_Controller
 		$menu = $this -> wei -> get_menu_rules($menu_where);
 		$menu = $this -> get_menu_tree($menu);
 
-		$this -> weidata['current'] = $current_rules;
-		$this -> weidata['menu'] = $menu;
-		$this -> weidata['admininfo'] = $this -> ADMINISTRSTORS;
+		$this -> weiData['current'] = $current_rules;
+		$this -> weiData['menu'] = $menu;
+		$this -> weiData['admininfo'] = $this -> ADMINISTRSTORS;
 	}
 
 	/**
