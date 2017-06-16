@@ -53,6 +53,12 @@ class CI_Controller {
 	
 	//管理员信息
 	public $ADMINISTRSTORS;
+
+	//系统前台全局变量
+	public $homeDate;
+
+	//系统后台全局变量
+	public $weiDate;
 	
 
 	/**
