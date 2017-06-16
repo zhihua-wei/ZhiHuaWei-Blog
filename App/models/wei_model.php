@@ -14,7 +14,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pkadmin_model extends CI_Model {
+class Wei_model extends CI_Model {
 	const TBL_LOG = 'admin_log';
 	const TBL_ADMIN = 'admin';
 	const TBL_SETTING = 'setting';
