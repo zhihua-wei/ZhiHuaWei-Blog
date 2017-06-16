@@ -15,7 +15,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admingroup_model extends CI_Model {
-	const TBL_ADMIN = 'admin';
+	const TBL_ADMIN = 'administrator';
 	const TBL_AUTHRULE = 'auth_rule';
 	const TBL_AUTHGROUP = 'auth_group';
 	const TBL_AUTHGROUPACCESS = 'auth_group_access';

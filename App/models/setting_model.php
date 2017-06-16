@@ -15,7 +15,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Setting_model extends CI_Model {
-	const TBL_DEVLOG = 'devlog';
+	const TBL_DEVLOG = 'blog_devlog';
 	const TBL_SETTING = 'administrator';
 	const TBL_AUTHRULE = 'auth_rule';
 
