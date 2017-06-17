@@ -50,7 +50,7 @@ class Wei_model extends CI_Model
         $params['admin_id'] = intval($admin_id);
         $params['username'] = $username;
         $params['time'] = time();
-        $params['ip'] = GetHostByName($_SERVER['SERVER_NAME']);
+        $params['ip'] = get_client_ip();
         $params['log'] = $log;
         $this->db->insert(self::TBL_LOG, $params);
     }
