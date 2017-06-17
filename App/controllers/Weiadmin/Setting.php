@@ -75,4 +75,21 @@ class Setting extends Wei_Controller
         $this->load->view('operatelog.html', $data);
     }
 
+    /**
+     * 删除一个月前操作日志
+     */
+    public function operatelog_del()
+    {
+        $data = $this->weiData;
+        //删除三十天前的日志记录
+        $t = time() - 3600 * 24 * 30;
+        $this->admin->del_month_ago_log($t);
+        $this->wei->add_log('删除操作日志！', $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
+        $success['msg'] = "删除操作日志操作成功！";
+        $success['url'] = site_url("Weiadmin/Setting/operatelog");
+        $success['wait'] = 3;
+        $data['success'] = $success;
+        $this->load->view('success.html', $data);
+    }
+
 }

@@ -38,16 +38,13 @@
                     <section class="panel">
                         <header class="panel-heading">
                             <span class="label label-primary"><?php echo $current['title'];?></span>
-                            <!--<span class="tools pull-right">-->
-                                <!--<a href="javascript:;" class="fa fa-chevron-down"></a>-->
-                            <!--</span>-->
                         </header>
                         <div class="panel-body">
                             <!-- BEGIN NAV -->
                             <nav class="navbar navbar-default">
                                 <form class="navbar-form form-inline" role="search">
                                     <div class="form-group pull-right">
-                                        <a href="<?php echo site_url('Weiadmin/Menu/add');?>" class="btn btn-danger pull-right"><i class="fa fa-trash-o"></i>删除一个月前记录</a>
+                                        <a href="<?php echo site_url('Weiadmin/Setting/operatelog_del');?>" class="btn btn-danger pull-right"><i class="fa fa-trash-o"></i>删除一个月前记录</a>
                                     </div>
                                 </form>
                             </nav>
