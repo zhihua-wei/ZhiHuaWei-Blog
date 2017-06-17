@@ -55,4 +55,6 @@ class Setting extends Wei_Controller
         $this->load->view('devlog.html', $data);
     }
 
+
+
 }
