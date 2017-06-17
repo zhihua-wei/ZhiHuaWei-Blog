@@ -19,7 +19,7 @@ class Article extends Wei_Controller
     {
         parent::__construct();
         $this->load->library('pagination');
-        $this->load->model('article_model', 'ac');
+        $this->load->model('article_model', 'article');
     }
 
     /**
@@ -29,16 +29,16 @@ class Article extends Wei_Controller
     {
         $data = $this->weiData;
         //配置分页信息
-        $config['base_url'] = site_url('Pkadmin/Article/index/');
-        $config['total_rows'] = $this->ac->get_article_count();
+        $config['base_url'] = site_url('Weiadmin/Article/index/');
+        $config['total_rows'] = $this->article->get_article_count();
         $config['per_page'] = 10;
         //初始化分类页
         $this->pagination->initialize($config);
         //生成分页信息
         $data['pageinfo'] = $this->pagination->create_links();
-        $article_list = $this->ac->get_article_list($config['per_page'], $offset);
+        $article_list = $this->article->get_article_list($config['per_page'], $offset);
         foreach ($article_list as $k => $v) {
-            $catrgory = $this->ac->get_category_info($v['category_id']);
+            $catrgory = $this->article->get_category_info($v['category_id']);
             $article_list[$k]['category_name'] = $catrgory['category_name'];
         }
         $data['article_list'] = $article_list;
@@ -51,7 +51,7 @@ class Article extends Wei_Controller
     public function add()
     {
         $data = $this->weiData;
-        $data['category_list'] = $this->ac->get_category_list();
+        $data['category_list'] = $this->article->get_category_list();
         $this->load->view('article_add.html', $data);
     }
 
@@ -61,8 +61,8 @@ class Article extends Wei_Controller
     public function edit($id)
     {
         $data = $this->weiData;
-        $data['category_list'] = $this->ac->get_category_list();
-        $data['article'] = $this->ac->get_article_info($id);
+        $data['category_list'] = $this->article->get_category_list();
+        $data['article'] = $this->article->get_article_info($id);
         $this->load->view('article_edit.html', $data);
     }
 
@@ -72,16 +72,16 @@ class Article extends Wei_Controller
     public function del($id)
     {
         $data = $this->weiData;
-        if ($this->ac->del_article($id)) {
+        if ($this->article->del_article($id)) {
             $this->wei->add_log('删除文章，ID：' . $id, $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
             $success['msg'] = "删除文章操作成功！";
-            $success['url'] = site_url("Pkadmin/Article/index");
+            $success['url'] = site_url("Weiadmin/Article/index");
             $success['wait'] = 3;
             $data['success'] = $success;
             $this->load->view('success.html', $data);
         } else {
             $error['msg'] = "删除文章操作失败！";
-            $error['url'] = site_url("Pkadmin/Article/index");
+            $error['url'] = site_url("Weiadmin/Article/index");
             $error['wait'] = 3;
             $data['error'] = $error;
             $this->load->view('error.html', $data);
@@ -111,7 +111,7 @@ class Article extends Wei_Controller
                 mkdir($config['upload_path'], 0777, true);
             }
             $config['allowed_types'] = 'gif|jpg|jpeg|png';
-            $config['file_name'] = 'pkadmin_' . date("YmdHis") . random();
+            $config['file_name'] = 'Weiadmin_' . date("YmdHis") . random();
             $config['max_size'] = 2048;
             $this->load->library('upload', $config);
             if ($this->upload->do_upload('article_pic')) {
@@ -120,7 +120,7 @@ class Article extends Wei_Controller
                 $params['article_pic'] = $path_info . $article_pic_info['file_name'];
             } else {
                 $error['msg'] = $this->upload->display_errors();
-                $error['url'] = site_url("Pkadmin/Article/index");
+                $error['url'] = site_url("Weiadmin/Article/index");
                 $error['wait'] = 3;
                 $data['error'] = $error;
                 $this->load->view('error.html', $data);
@@ -129,16 +129,16 @@ class Article extends Wei_Controller
         }
         if ($id) {
             //修改文章
-            if ($this->ac->update_article($id, $params)) {
+            if ($this->article->update_article($id, $params)) {
                 $this->wei->add_log('修改文章：' . $params['article_title'], $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
                 $success['msg'] = "修改文章成功！";
-                $success['url'] = site_url("Pkadmin/Article/index");
+                $success['url'] = site_url("Weiadmin/Article/index");
                 $success['wait'] = 3;
                 $data['success'] = $success;
                 $this->load->view('success.html', $data);
             } else {
                 $error['msg'] = "修改文章失败！";
-                $error['url'] = site_url("Pkadmin/Article/index");
+                $error['url'] = site_url("Weiadmin/Article/index");
                 $error['wait'] = 3;
                 $data['error'] = $error;
                 $this->load->view('error.html', $data);
@@ -146,16 +146,16 @@ class Article extends Wei_Controller
         } else {
             //插入文章
             $params['issue_time'] = time();
-            if ($this->ac->insert_article($params)) {
+            if ($this->article->insert_article($params)) {
                 $this->wei->add_log('新增文章：' . $params['article_title'], $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
                 $success['msg'] = "新增文章成功！";
-                $success['url'] = site_url("Pkadmin/Article/index");
+                $success['url'] = site_url("Weiadmin/Article/index");
                 $success['wait'] = 3;
                 $data['success'] = $success;
                 $this->load->view('success.html', $data);
             } else {
                 $error['msg'] = "新增文章失败！";
-                $error['url'] = site_url("Pkadmin/Article/index");
+                $error['url'] = site_url("Weiadmin/Article/index");
                 $error['wait'] = 3;
                 $data['error'] = $error;
                 $this->load->view('error.html', $data);
