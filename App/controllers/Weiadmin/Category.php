@@ -18,7 +18,7 @@ class Category extends Wei_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('article_model', 'ac');
+        $this->load->model('article_model', 'article');
     }
 
     /**
@@ -27,7 +27,7 @@ class Category extends Wei_Controller
     public function index()
     {
         $data = $this->weiData;
-        $data['category_list'] = $this->ac->get_category_list();
+        $data['category_list'] = $this->article->get_category_list();
         $this->load->view('category.html', $data);
     }
 
@@ -47,7 +47,7 @@ class Category extends Wei_Controller
     {
         $data = $this->weiData;
         //分类下存在文章，不允许删除
-        if ($this->ac->get_article_of_category($id)) {
+        if ($this->article->get_article_of_category($id)) {
             $error['msg'] = "此分类下存在文章，不允许删除！";
             $error['url'] = site_url("Weiadmin/Category/index");
             $error['wait'] = 3;
@@ -55,7 +55,7 @@ class Category extends Wei_Controller
             $this->load->view('error.html', $data);
             return;
         }
-        if ($this->ac->del_category($id)) {
+        if ($this->article->del_category($id)) {
             $this->wei->add_log('删除文章分类，ID：' . $id, $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
             $success['msg'] = "删除文章分类操作成功！";
             $success['url'] = site_url("Weiadmin/Category/index");
@@ -77,7 +77,7 @@ class Category extends Wei_Controller
     public function edit($id)
     {
         $data = $this->weiData;
-        $data['category'] = $this->ac->get_category_info($id);
+        $data['category'] = $this->article->get_category_info($id);
         $this->load->view('category_edit.html', $data);
     }
 
@@ -95,7 +95,7 @@ class Category extends Wei_Controller
 
         if ($id) {
             //修改修改分类
-            if ($this->ac->update_category($id, $params)) {
+            if ($this->article->update_category($id, $params)) {
                 $this->wei->add_log('修改文章分类：' . $params['category_name'], $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
                 $success['msg'] = "修改文章分类成功！";
                 $success['url'] = site_url("Weiadmin/Category/index");
