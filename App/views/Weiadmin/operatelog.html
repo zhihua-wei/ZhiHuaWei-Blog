@@ -5,13 +5,14 @@
     <!-- BEGIN META -->
     <?php $this->load->view('Public/headmeta.html');?>
     <!-- END META -->
+
     <!-- BEGIN STYLESHEET-->
     <?php $this->load->view('Public/headcss.html');?>
     <!-- END STYLESHEET-->
     <title>
-        控制台 -
-        <?php echo $setting['title'];?>
+        <?php echo $current['title']."-".$setting['title'];?>
     </title>
+
 </head>
 
 <body>
@@ -28,42 +29,15 @@
         <!-- BEGIN WRAPPER  -->
         <section class="wrapper">
             <!-- TOPMENU ROW  -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="breadcrumb">
-                        <li>
-                            <a href="<?php echo site_url('Weiadmin/Admin/index');?>"><i class="fa fa-home"></i>首页</a>
-                        </li>
-                        <li>»</li>
-                        <li>
-                            <a href="#">控制台</a>
-                        </li>
-                        <li>»</li>
-                        <li class="active">系统信息</li>
-                    </ul>
-                </div>
-            </div>
+            <?php $this->load->view('Public/topmenu.html');?>
             <!-- TOPMENU ROW  -->
-
-            <!-- ALERT TIPS -->
-            <?php
-						if($current['tips'] != ''){
-							echo '<div class="alert alert-success fade in">
-            <button data-dismiss="alert" class="close close-sm" type="button">
-                <i class="fa fa-times"></i>
-            </button>
-            <strong></strong>'.$current['tips'].'
-            </div>';
-            }
-            ?>
-            <!-- ALERT TIPS -->
 
             <!-- LOG ROW  -->
             <div class="row">
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            <span class="label label-primary">日志列表（仅保存最近一个月的）</span>
+                            <span class="label label-primary">日志列表</span>
 									<span class="tools pull-right">
 										<a href="javascript:;" class="fa fa-chevron-down"></a>
 									</span>
