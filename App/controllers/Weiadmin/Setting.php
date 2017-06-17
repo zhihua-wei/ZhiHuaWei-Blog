@@ -64,7 +64,7 @@ class Setting extends Wei_Controller
     {
         $data = $this->weiData;
         //配置分页信息
-        $config['base_url'] = site_url('Weiadmin/Setting/index/');
+        $config['base_url'] = site_url('Weiadmin/Setting/operatelog/');
         $config['total_rows'] = $this->admin->get_log_count($this->ADMINISTRSTORS['admin_id']);
         $config['per_page'] = 6;
         //初始化分类页
