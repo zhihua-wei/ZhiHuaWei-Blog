@@ -116,6 +116,7 @@ class Personal extends Wei_Controller
         }
 
         if ($this->wei->set_admin_profile($this->ADMINISTRSTORS['admin_id'], $params)) {
+            $this->wei->add_log('修改个人资料！', $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
             $success['msg'] = "个人资料修改成功！";
             $success['url'] = site_url("Weiadmin/Personal/index");
             $success['wait'] = 3;
