@@ -43,9 +43,9 @@ class Personal extends Wei_Controller
         $params['email'] = $this->input->post('email');
 
         //头像上传
-        if (!empty($_FILES['head_pic']['tmp_name'])) {
+        if (!empty($_FILES['head_pic']['tep_name'])) {
             //配置上传参数
-            $config['upload_path'] = $this->config->item('base_url') . '/Data/upload/head_pic/' . date("Ym");
+            $config['upload_path'] = './Data/upload/head_pic/' . date("Ym");
             //原图路径
             if (!file_exists($config['upload_path'])) {
                 mkdir($config['upload_path'], 0777, true);
