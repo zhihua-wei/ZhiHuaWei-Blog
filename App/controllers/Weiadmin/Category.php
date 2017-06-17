@@ -49,7 +49,7 @@ class Category extends Wei_Controller
         //分类下存在文章，不允许删除
         if ($this->ac->get_article_of_category($id)) {
             $error['msg'] = "此分类下存在文章，不允许删除！";
-            $error['url'] = site_url("Pkadmin/Category/index");
+            $error['url'] = site_url("Weiadmin/Category/index");
             $error['wait'] = 3;
             $data['error'] = $error;
             $this->load->view('error.html', $data);
@@ -58,13 +58,13 @@ class Category extends Wei_Controller
         if ($this->ac->del_category($id)) {
             $this->wei->add_log('删除文章分类，ID：' . $id, $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
             $success['msg'] = "删除文章分类操作成功！";
-            $success['url'] = site_url("Pkadmin/Category/index");
+            $success['url'] = site_url("Weiadmin/Category/index");
             $success['wait'] = 3;
             $data['success'] = $success;
             $this->load->view('success.html', $data);
         } else {
             $error['msg'] = "删除文章分类操作失败！";
-            $error['url'] = site_url("Pkadmin/Category/index");
+            $error['url'] = site_url("Weiadmin/Category/index");
             $error['wait'] = 3;
             $data['error'] = $error;
             $this->load->view('error.html', $data);
@@ -98,13 +98,13 @@ class Category extends Wei_Controller
             if ($this->ac->update_category($id, $params)) {
                 $this->wei->add_log('修改文章分类：' . $params['category_name'], $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
                 $success['msg'] = "修改文章分类成功！";
-                $success['url'] = site_url("Pkadmin/Category/index");
+                $success['url'] = site_url("Weiadmin/Category/index");
                 $success['wait'] = 3;
                 $data['success'] = $success;
                 $this->load->view('success.html', $data);
             } else {
                 $error['msg'] = "修改文章分类失败！";
-                $error['url'] = site_url("Pkadmin/Category/index");
+                $error['url'] = site_url("Weiadmin/Category/index");
                 $error['wait'] = 3;
                 $data['error'] = $error;
                 $this->load->view('error.html', $data);
@@ -112,16 +112,16 @@ class Category extends Wei_Controller
 
         } else {
             //新增文章分类
-            if ($this->ac->insert_category($params)) {
+            if ($this->article->insert_category($params)) {
                 $this->wei->add_log('新增文章分类：' . $params['category_name'], $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
                 $success['msg'] = "新增文章分类成功！";
-                $success['url'] = site_url("Pkadmin/Category/index");
+                $success['url'] = site_url("Weiadmin/Category/index");
                 $success['wait'] = 3;
                 $data['success'] = $success;
                 $this->load->view('success.html', $data);
             } else {
                 $error['msg'] = "新增文章分类失败！";
-                $error['url'] = site_url("Pkadmin/Category/index");
+                $error['url'] = site_url("Weiadmin/Category/index");
                 $error['wait'] = 3;
                 $data['error'] = $error;
                 $this->load->view('error.html', $data);
