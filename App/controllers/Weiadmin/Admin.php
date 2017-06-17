@@ -44,22 +44,4 @@ class Admin extends Wei_Controller
         $this->load->view('admin.html', $data);
     }
 
-    /**
-     * 操作日志
-     */
-    public function operatelog($offset = '')
-    {
-        $data = $this->weiData;
-        //配置分页信息
-        $config['base_url'] = site_url('Weiadmin/Admin/index/');
-        $config['total_rows'] = $this->admin->get_log_count($this->ADMINISTRSTORS['admin_id']);
-        $config['per_page'] = 15;
-        //初始化分类页
-        $this->pagination->initialize($config);
-        //生成分页信息
-        $data['pageinfo'] = $this->pagination->create_links();
-        $data['admin_log'] = $this->admin->get_admin_log_list($this->ADMINISTRSTORS['admin_id'], $config['per_page'], $offset);
-        $this->load->view('operatelog.html', $data);
-    }
-
 }
