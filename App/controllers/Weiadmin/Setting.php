@@ -64,9 +64,9 @@ class Setting extends Wei_Controller
     {
         $data = $this->weiData;
         //配置分页信息
-        $config['base_url'] = site_url('Weiadmin/Admin/index/');
+        $config['base_url'] = site_url('Weiadmin/Setting/index/');
         $config['total_rows'] = $this->admin->get_log_count($this->ADMINISTRSTORS['admin_id']);
-        $config['per_page'] = 15;
+        $config['per_page'] = 6;
         //初始化分类页
         $this->pagination->initialize($config);
         //生成分页信息
