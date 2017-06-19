@@ -42,46 +42,74 @@
                         </header>
                         <div class="panel-body">
                             <div class="form">
-                                <form class="cmxform form-horizontal tasi-form" id="settingForm" method="post" action="<?php echo site_url('Weiadmin/Setting/setting');?>" enctype="multipart/form-data">
+                                <form class="cmxform form-horizontal tasi-form" id="settingForm" method="post" action="<?php echo site_url('Weiadmin/Blogset/config');?>" enctype="multipart/form-data">
+
+                                    <div class="form-group">
+                                        <label for="title" class="control-label col-lg-2">网站名称</label>
+                                        <div class="col-lg-3">
+                                            <input class="form-control bg-white" id="webname" name="webname" type="text" value="<?php echo $config['webname'];?>">
+                                        </div>
+                                        <label class="control-label col-lg-4 color-red t-left">网站名称，前台调用：echo $config['webname'];</label>
+                                    </div>
 
                                     <div class="form-group">
                                         <label for="title" class="control-label col-lg-2">网站标题</label>
                                         <div class="col-lg-3">
-                                            <input class="form-control bg-white" id="title" name="title" type="text" value="<?php echo $setting['title'];?>">
+                                            <input class="form-control bg-white" id="title" name="title" type="text" value="<?php echo $config['title'];?>">
                                         </div>
-                                        <label class="control-label col-lg-4 color-red t-left">网站标题，前台调用：echo $setting['title'];</label>
+                                        <label class="control-label col-lg-4 color-red t-left">网站标题，前台调用：echo $config['title'];</label>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="sitename" class="control-label col-lg-2">网站SEO标题</label>
-                                        <div class="col-lg-3">
-                                            <input class="form-control" id="sitename" name="sitename" type="text" value="<?php echo $setting['sitename'];?>">
+                                    <div class="form-group last">
+                                        <label for="logo" class="control-label col-sm-2">头像</label>
+                                        <div class="col-sm-3">
+                                            <div class="fileupload fileupload-new" data-provides="fileupload">
+                                                <div class="fileupload-new thumbnail">
+                                                    <img src="<?php if(!empty($config['logo'])){echo base_url($config['logo']);}else{echo base_url('Public/Wei/img/no_image.png');}?>">
+                                                </div>
+                                                <div class="fileupload-preview fileupload-exists thumbnail">
+                                                </div>
+                                                <div>
+                                                    <span class="btn btn-white btn-file">
+                                                        <span class="fileupload-new">
+                                                            <i class="fa fa-paper-clip"></i> 选择LOGO
+                                                        </span>
+                                                    <span class="fileupload-exists">
+                                                        <i class="fa fa-undo"></i> 重置
+                                                    </span>
+                                                    <input type="file" class="default" name="logo">
+                                                    </span>
+                                                    <a href="#" class="btn btn-danger fileupload-exists"
+                                                       data-dismiss="fileupload">
+                                                        <i class="fa fa-trash"></i> 删除
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <label class="control-label col-lg-4 color-red t-left">网站标题，前台调用：echo $setting['sitename'];</label>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="keywords" class="control-label col-lg-2">网站关键词</label>
                                         <div class="col-lg-3">
-                                            <input class="form-control" id="keywords" name="keywords" type="text" value="<?php echo $setting['keywords'];?>">
+                                            <input class="form-control" id="keywords" name="keywords" type="text" value="<?php echo $config['keywords'];?>">
                                         </div>
-                                        <label class="control-label col-lg-4 color-red t-left">关键词，前台调用：echo $setting['keywords'];</label>
+                                        <label class="control-label col-lg-4 color-red t-left">关键词，前台调用：echo $config['keywords'];</label>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="footer" class="control-label col-lg-2">底部版权</label>
                                         <div class="col-lg-3">
-                                            <input class="form-control" id="footer" name="footer" type="text" value="<?php echo $setting['footer'];?>">
+                                            <input class="form-control" id="coryright" name="coryright" type="text" value="<?php echo $config['coryright'];?>">
                                         </div>
-                                        <label class="control-label col-lg-4 color-red t-left">网站标题，前台调用：echo $setting['footer'];</label>
+                                        <label class="control-label col-lg-4 color-red t-left">底部版权，前台调用：echo $config['coryright'];</label>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="description" class="control-label col-lg-2">网站描述</label>
                                         <div class="col-lg-3">
-                                            <textarea class="form-control h-120" id="description" name="description"><?php echo $setting['description'];?></textarea>
+                                            <textarea class="form-control h-120" id="description" name="description"><?php echo $config['description'];?></textarea>
                                         </div>
-                                        <label class="control-label col-lg-4 color-red t-left">网站描述，前台调用：echo $setting['description'];</label>
+                                        <label class="control-label col-lg-4 color-red t-left">网站描述，前台调用：echo $config['description'];</label>
                                     </div>
 
                                     <div class="form-group">
