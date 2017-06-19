@@ -28,7 +28,7 @@ class Blogset extends Wei_Controller
     public function setting()
     {
         $data = $this->weiData;
-
+        $this->load->view('config.html', $data);
     }
 
     /**
