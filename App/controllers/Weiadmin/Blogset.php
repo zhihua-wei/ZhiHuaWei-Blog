@@ -46,7 +46,7 @@ class Blogset extends Wei_Controller
             //LOGO上传
             if (!empty($_FILES['logo']['tmp_name'])) {
                 $logourl = $this->pic_upload($_FILES['logo'], "Data/upload/logo/", "logo", "Weiadmin/Blogset/config");
-                if($logourl){
+                if ($logourl) {
                     $params['logo'] = $logourl;
                 }
             }
@@ -61,6 +61,15 @@ class Blogset extends Wei_Controller
             $this->load->view('config.html', $data);
         }
     }
+
+    /**
+     * 背景图设置
+     */
+    public function background()
+    {
+
+    }
+
 
     /**
      * 轮播图设置
@@ -91,10 +100,5 @@ class Blogset extends Wei_Controller
         $this->load->view('admin.html', $data);
     }
 
-    /**
-     * 背景图设置
-     */
-    public function background()
-    {
-    }
+
 }
