@@ -57,6 +57,7 @@
 												<th class="text-center "><i class="fa fa-sitemap "></i> 分类名称 </th>
 												<th class="text-center "><i class="fa fa-edit "></i> 分类描述 </th>
 												<th class="text-center "><i class="fa fa-sort-numeric-asc "></i> 排序 </th>
+												<th class="text-center"><i class="fa fa-ban"></i> 状态 </th>
 												<th class="text-center "><i class="fa fa-calendar-o "></i> 操作 </th>
 											</tr>
 										</thead>
@@ -74,6 +75,9 @@
 												</td>
 												<td class="text-center ">
 													<?php echo $item['sort'];?>
+												</td>
+												<td class="text-center">
+													<?php if($item['is_show']) echo "显示"; else echo "隐藏";?>
 												</td>
 												<td class="text-center ">
 													<a href="<?php echo site_url('Weiadmin/Category/edit').'/'.$item['category_id'];?>" class="btn btn-primary btn-xs" title="修改">
