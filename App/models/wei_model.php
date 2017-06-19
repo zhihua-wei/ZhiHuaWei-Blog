@@ -41,9 +41,9 @@ class Wei_model extends CI_Model
     }
 
     /**
-     * 函数：获取系统设置信息
+     * 函数：获取博客配置信息
      * @param string $key 可选，配置key值
-     * @return array 系统配置信息
+     * @return array 博客配置信息
      */
     public function get_config($key = '')
     {
@@ -54,8 +54,8 @@ class Wei_model extends CI_Model
             }
             return $config;
         } else {
-            $setting = $this->db->where("key = {$key}")->get(self::TBL_CONFIG)->row_array();
-            return $setting['val'];
+            $config = $this->db->where("key = {$key}")->get(self::TBL_CONFIG)->row_array();
+            return $config['val'];
         }
     }
 
