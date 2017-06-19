@@ -67,7 +67,8 @@ class Blogset extends Wei_Controller
      */
     public function background()
     {
-
+        $data = $this->weiData;
+        $this->load->view('background.html', $data);
     }
 
 
