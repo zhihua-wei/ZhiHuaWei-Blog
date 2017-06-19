@@ -10,15 +10,7 @@
 					</span>
 				</a>
 			</li>
-			<?php $class = array(
-						1=>'label-info',
-						2=>'label-success',
-						3=>'label-danger',
-						4=>'label-primary',
-						5=>'label-warning',
-						6=>'label-inverse',
-						7=>'label-default',);
-					$colorarr = array('black','chartreuse','chocolate','crimson','darkcyan','dimgray','olivedrab','maroon','gainsboro','goldenrod','lightgreen','lightgreen');
+			<?php 	$colorarr = array('black','chartreuse','chocolate','crimson','darkcyan','dimgray','olivedrab','maroon','gainsboro','goldenrod','lightgreen','lightgreen');
 			foreach ($menu as $item):?>
 			<li class="sub-menu">
 				<a href="javascript:;" <?php if(($item['id']==$current['id']) || ($item['id']==$current['pid']) || ($item['id']==$current['ppid'])) echo 'class="active"';?>>
@@ -26,7 +18,7 @@
 					<span>
 						<?php echo $item['title'];?>
 					</span>
-					<span class="label span-sidebar" <?php if(!empty($item['children']) && count($item['children'])<11) echo 'style="background-color:{$colorarr[count($item['children'])]}"'; else 'style="background-color:{$colorarr[rand(0,11)]}"';?>>
+					<span class="label span-sidebar" style="background-color: <?php if(!empty($item['children']) && count($item['children'])<11) echo $colorarr[count($item['children'])];else echo $colorarr[rand(0,11)];?>">
 						<?php if(!empty($item['children']))echo count($item['children']);else echo 0;?>
 					</span>
 				</a>
