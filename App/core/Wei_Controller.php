@@ -136,7 +136,7 @@ class Wei_Controller extends CI_Controller
      * @param string $url 上传错误跳转地址 Weiadmin/Blogset/config
      * @return string
      */
-    public function upload($picture, $dir, $name, $url)
+    public function pic_upload($picture, $dir, $name, $url)
     {
         //头像上传
         if (!empty($picture['tmp_name'])) {
@@ -146,7 +146,6 @@ class Wei_Controller extends CI_Controller
             if (!file_exists($config['upload_path'])) {
                 mkdir($config['upload_path'], 0777, true);
             }
-
             $config['allowed_types'] = 'gif|jpg|jpeg|png';
             $config['file_name'] = 'Weiadmin_' . date("YmdHis") . random();
             $config['max_size'] = 2048;

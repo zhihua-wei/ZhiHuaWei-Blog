@@ -34,11 +34,24 @@ class Blogset extends Wei_Controller
             $params['title'] = $this->input->post('title');
             $params['sitename'] = $this->input->post('sitename');
             $params['keywords'] = $this->input->post('keywords');
-            $params['footer'] = $this->input->post('footer');
+            $params['coryright'] = $this->input->post('coryright');
             $params['description'] = $this->input->post('description');
-            $params['title'] = $this->input->post('title');
-            $params['title'] = $this->input->post('title');
-
+            $is_open = $this->input->post('is_open');
+            if (empty($is_open)) {
+                $params['is_open'] = 0;
+            } else {
+                $params['is_open'] = 1;
+            }
+            $params['reason'] = $this->input->post('reason');
+            //LOGO上传
+            if (!empty($_FILES['logo']['tmp_name'])) {
+                $logourl = $this->pic_upload($_FILES['logo'], "Data/upload/logo/", "logo", "Weiadmin/Blogset/config");
+                if($logourl){
+                    $params['logo'] = $logourl;
+                }
+            }
+            var_dump($params);
+            exit;
 
             $this->con->update_site_setting($params);
             $this->wei->add_log('修改网站配置信息！', $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
