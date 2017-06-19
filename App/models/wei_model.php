@@ -19,6 +19,7 @@ class Wei_model extends CI_Model
     const TBL_LOG = 'admin_log';
     const TBL_ADMIN = 'administrator';
     const TBL_SETTING = 'system_setting';
+    const TBL_CONFIG = 'blog_config';
 
     /**
      * 函数：获取系统设置信息
@@ -35,6 +36,25 @@ class Wei_model extends CI_Model
             return $config;
         } else {
             $setting = $this->db->where("key = {$key}")->get(self::TBL_SETTING)->row_array();
+            return $setting['val'];
+        }
+    }
+
+    /**
+     * 函数：获取系统设置信息
+     * @param string $key 可选，配置key值
+     * @return array 系统配置信息
+     */
+    public function get_config($key = '')
+    {
+        if ($key == '') {
+            $setting = $this->db->select("key,val")->get(self::TBL_CONFIG)->result_array();
+            foreach ($setting as $k => $v) {
+                $config[$v['key']] = $v['val'];
+            }
+            return $config;
+        } else {
+            $setting = $this->db->where("key = {$key}")->get(self::TBL_CONFIG)->row_array();
             return $setting['val'];
         }
     }
