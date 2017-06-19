@@ -18,7 +18,7 @@ class Blogset extends Wei_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('login_model', 'admin');
+        $this->load->model('config_model', 'config');
         $this->load->library('pagination');
     }
 
