@@ -18,19 +18,20 @@
 						5=>'label-warning',
 						6=>'label-inverse',
 						7=>'label-default',);
-				foreach ($menu as $item):?>
+					$colorarr = array('black','chartreuse','chocolate','crimson','darkcyan','dimgray','olivedrab','maroon','gainsboro','goldenrod','lightgreen','lightgreen');
+			foreach ($menu as $item):?>
 			<li class="sub-menu">
 				<a href="javascript:;" <?php if(($item['id']==$current['id']) || ($item['id']==$current['pid']) || ($item['id']==$current['ppid'])) echo 'class="active"';?>>
 					<i class="<?php echo $item['icon'];?>"></i>
 					<span>
 						<?php echo $item['title'];?>
 					</span>
-					<span class="label <?php if(count($item['children'])<8) echo $class[count($item['children'])]; else echo " label-inverse ";?> span-sidebar">
-						<?php echo count($item['children']);?>
+					<span class="label span-sidebar" <?php if(!empty($item['children']) && count($item['children'])<11) echo 'style="background-color:{$colorarr[count($item['children'])]}"'; else 'style="background-color:{$colorarr[rand(0,11)]}"';?>>
+						<?php if(!empty($item['children']))echo count($item['children']);else echo 0;?>
 					</span>
 				</a>
 				<ul class="sub">
-					<?php foreach($item['children'] as $child):?>
+					<?php if(!empty($item['children'])) foreach($item['children'] as $child):?>
 					<li <?php if(($child[ 'id']==$current['id']) || ($child[ 'id']==$current['pid'])) echo 'class="active"';?>>
 						<a href="<?php echo site_url('Weiadmin/'.$child['name']);?>">
 							<?php echo $child['title'];?>
