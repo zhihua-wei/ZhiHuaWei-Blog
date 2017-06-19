@@ -92,7 +92,12 @@ class Category extends Wei_Controller
         $params['keywords'] = $this->input->post('keywords');
         $params['sort'] = $this->input->post('sort');
         $params['category_desc'] = $this->input->post('category_desc');
-        $params['is_show'] = $this->input->post('is_show');
+        $is_show = $this->input->post('is_show');
+        if (empty($is_show)) {
+            $params['is_show'] = 0;
+        } else {
+            $params['is_show'] = 1;
+        }
 
         if ($id) {
             //修改修改分类
