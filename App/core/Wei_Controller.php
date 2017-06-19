@@ -94,6 +94,8 @@ class Wei_Controller extends CI_Controller
 		}
 		$menu = $this -> wei -> get_menu_rules($menu_where);
 		$menu = $this -> get_menu_tree($menu);
+var_dump($menu);
+		exit;
 
 		$this -> weiData['current'] = $current_rules;
 		$this -> weiData['menu'] = $menu;
