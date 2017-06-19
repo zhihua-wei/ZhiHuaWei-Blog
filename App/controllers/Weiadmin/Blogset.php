@@ -50,12 +50,9 @@ class Blogset extends Wei_Controller
                     $params['logo'] = $logourl;
                 }
             }
-            var_dump($params);
-            exit;
-
-            $this->con->update_site_setting($params);
-            $this->wei->add_log('修改网站配置信息！', $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
-            $success['msg'] = "网站信息设置成功！";
+            $this->con->update_blog_config($params);
+            $this->wei->add_log('修改博客配置信息！', $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
+            $success['msg'] = "博客配置信息设置成功！";
             $success['url'] = site_url("Weiadmin/Blogset/config");
             $success['wait'] = 3;
             $data['success'] = $success;
@@ -63,7 +60,6 @@ class Blogset extends Wei_Controller
         } else {
             $this->load->view('config.html', $data);
         }
-        //$this->load->view('config.html', $data);
     }
 
     /**
