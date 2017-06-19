@@ -16,7 +16,18 @@ class Config_model extends CI_Model
 {
     const TBL_CONFIG = 'blog_config';
 
-
+    /**
+     * 函数：更新博客设置信息
+     * @param array $params 网站信息内容
+     */
+    public function update_blog_config($params)
+    {
+        foreach ($params as $key => $val) {
+            $condition['key'] = $key;
+            $data['value'] = $val;
+            $this->db->where($condition)->update(self::TBL_CONFIG, $data);
+        }
+    }
 
 
 }

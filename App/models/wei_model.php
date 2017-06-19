@@ -48,14 +48,14 @@ class Wei_model extends CI_Model
     public function get_config($key = '')
     {
         if ($key == '') {
-            $setting = $this->db->select("key,val")->get(self::TBL_CONFIG)->result_array();
+            $setting = $this->db->select("key,value")->get(self::TBL_CONFIG)->result_array();
             foreach ($setting as $k => $v) {
-                $config[$v['key']] = $v['val'];
+                $config[$v['key']] = $v['value'];
             }
             return $config;
         } else {
             $config = $this->db->where("key = {$key}")->get(self::TBL_CONFIG)->row_array();
-            return $config['val'];
+            return $config['value'];
         }
     }
 
