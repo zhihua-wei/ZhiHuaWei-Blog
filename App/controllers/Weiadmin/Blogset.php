@@ -23,10 +23,22 @@ class Blogset extends Wei_Controller
     }
 
     /**
+     * 博客设置
+     */
+    public function setting()
+    {
+        $data = $this->weiData;
+
+    }
+
+    /**
      * 轮播图设置
      */
     public function carousel()
     {
+        var_dump(111);
+        exit;
+
     }
 
 

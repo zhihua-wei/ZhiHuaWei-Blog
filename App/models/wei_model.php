@@ -18,7 +18,7 @@ class Wei_model extends CI_Model
 {
     const TBL_LOG = 'admin_log';
     const TBL_ADMIN = 'administrator';
-    const TBL_SETTING = 'setting';
+    const TBL_SETTING = 'system_setting';
 
     /**
      * 函数：获取系统设置信息
