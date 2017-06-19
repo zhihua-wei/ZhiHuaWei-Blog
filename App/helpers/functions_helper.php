@@ -78,6 +78,12 @@ if (!function_exists('get_client_ip')) {
 
 }
 
+if(!function_exists('upload')){
+    /**
+     * 函数：图片上传
+     */
+}
+
 
 
 

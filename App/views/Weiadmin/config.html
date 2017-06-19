@@ -45,7 +45,7 @@
                                 <form class="cmxform form-horizontal tasi-form" id="settingForm" method="post" action="<?php echo site_url('Weiadmin/Blogset/config');?>" enctype="multipart/form-data">
 
                                     <div class="form-group">
-                                        <label for="title" class="control-label col-lg-2">网站名称</label>
+                                        <label for="webname" class="control-label col-lg-2">网站名称</label>
                                         <div class="col-lg-3">
                                             <input class="form-control bg-white" id="webname" name="webname" type="text" value="<?php echo $config['webname'];?>">
                                         </div>
@@ -61,7 +61,7 @@
                                     </div>
 
                                     <div class="form-group last">
-                                        <label for="logo" class="control-label col-sm-2">头像</label>
+                                        <label for="logo" class="control-label col-sm-2">博客LOGO</label>
                                         <div class="col-sm-3">
                                             <div class="fileupload fileupload-new" data-provides="fileupload">
                                                 <div class="fileupload-new thumbnail">
@@ -84,6 +84,7 @@
                                                         <i class="fa fa-trash"></i> 删除
                                                     </a>
                                                 </div>
+                                                <span style="margin-left: 20px;color: chartreuse">推荐图片大小117px*111px</span>
                                             </div>
                                         </div>
                                     </div>
@@ -97,7 +98,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="footer" class="control-label col-lg-2">底部版权</label>
+                                        <label for="coryright" class="control-label col-lg-2">底部版权</label>
                                         <div class="col-lg-3">
                                             <input class="form-control" id="coryright" name="coryright" type="text" value="<?php echo $config['coryright'];?>">
                                         </div>
@@ -110,6 +111,23 @@
                                             <textarea class="form-control h-120" id="description" name="description"><?php echo $config['description'];?></textarea>
                                         </div>
                                         <label class="control-label col-lg-4 color-red t-left">网站描述，前台调用：echo $config['description'];</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="is_open" class="control-label col-lg-2">关闭系统</label>
+                                        <div class="m-bot15">
+                                            <div class="col-lg-3">
+                                                <input class="form-control" id="is_open" name="is_open" type="checkbox" data-toggle="switch" <?php if($config['is_open']==1) echo 'checked="checked"';?>>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="reason" class="control-label col-lg-2">关闭原因</label>
+                                        <div class="col-lg-3">
+                                            <textarea class="form-control h-120" id="reason" name="reason"><?php echo $config['reason'];?></textarea>
+                                        </div>
+                                        <label class="control-label col-lg-4 color-red t-left">关闭原因，前台调用：echo $config['reason'];</label>
                                     </div>
 
                                     <div class="form-group">

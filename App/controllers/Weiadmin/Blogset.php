@@ -30,11 +30,16 @@ class Blogset extends Wei_Controller
         $data = $this->weiData;
         $data['config'] = $this->wei->get_config();
         if ($_POST) {
+            $params['webname'] = $this->input->post('webname');
             $params['title'] = $this->input->post('title');
             $params['sitename'] = $this->input->post('sitename');
             $params['keywords'] = $this->input->post('keywords');
             $params['footer'] = $this->input->post('footer');
             $params['description'] = $this->input->post('description');
+            $params['title'] = $this->input->post('title');
+            $params['title'] = $this->input->post('title');
+
+
             $this->con->update_site_setting($params);
             $this->wei->add_log('修改网站配置信息！', $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
             $success['msg'] = "网站信息设置成功！";
