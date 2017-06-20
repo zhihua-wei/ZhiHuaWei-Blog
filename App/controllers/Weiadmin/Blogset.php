@@ -100,7 +100,6 @@ class Blogset extends Wei_Controller
     {
         $data = $this->weiData;
         $this->load->view('carousel.html', $data);
-
     }
 
 
