@@ -71,6 +71,13 @@ class Blogset extends Wei_Controller
         $this->load->view('background.html', $data);
     }
 
+    /**
+     * 新增背景图
+     */
+    public function background_add()
+    {
+    }
+
 
     /**
      * 轮播图设置
