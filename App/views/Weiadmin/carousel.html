@@ -1,10 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
+<head>
+    <!-- BEGIN META -->
+    <?php $this->load->view('Public/headmeta.html');?>
+    <!-- END META -->
+
+    <!-- BEGIN STYLESHEET-->
+    <?php $this->load->view('Public/headcss.html');?>
+    <link href="<?php echo base_url('Public/Wei/assets/fancybox/source/jquery.fancybox.css');?>" rel="stylesheet">
+    <!-- FANCYBOX CSS -->
+    <link href="<?php echo base_url('Public/Wei/css/gallery.css');?>" rel="stylesheet" type="text/css">
+    <!-- GALLERY CSS -->
+    <!-- END STYLESHEET-->
+    <title>
+        <?php echo $current['title']."-".$setting['title'];?>
+    </title>
+
+</head>
+
+<body>
+<!-- BEGIN SECTION -->
+<section id="container">
+    <!-- BEGIN HEADER -->
+    <?php $this->load->view('Public/header.html');?>
+    <!-- END HEADER -->
+    <!-- BEGIN SIDEBAR -->
+    <?php $this->load->view('Public/sidebar.html');?>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN MAIN CONTENT -->
+    <section id="main-content">
+        <!-- BEGIN WRAPPER  -->
+        <section class="wrapper">
+            <!-- TOPMENU ROW  -->
+            <?php $this->load->view('Public/topmenu.html');?>
+            <!-- TOPMENU ROW  -->
+
+            <!-- BEGIN ROW  -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            <span class="label label-primary"><?php echo $current['title'];?></span>
+                            <span class="tools pull-right"></span>
+                        </header>
+                        <div class="panel-body">
+                            <!-- BEGIN NAV -->
+                            <nav class="navbar navbar-default">
+                                <form class="navbar-form form-inline" role="search" style="border: none">
+                                    <div class="form-group pull-right">
+                                        <a href="<?php echo site_url('Weiadmin/Blogset/background_add');?>" class="btn btn-primary pull-right">
+                                            <i class="fa fa-plus"></i> 新增背景图
+                                        </a>
+                                    </div>
+                                </form>
+                            </nav>
+                            <!-- END NAV -->
+                            <ul class="grid cs-style-3">
+                                <li>
+                                    <figure>
+                                        <img src="<?php echo base_url('Data/gallery/login.png');?>" alt="登录页">
+                                        <figcaption>
+                                            <h3>1.登录页</h3>
+                                            <span> zhihua_w </span>
+                                            <a class="fancybox" data-fancybox-group="group" href="<?php echo base_url('Data/gallery/login.png');?>">Read</a>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="background-btn">
+                                        <a class="btn btn-primary fa fa-pencil" href="">&nbsp;&nbsp;修改</a>
+                                        <a class="btn btn-danger fa fa-trash-o" >&nbsp;&nbsp;删除</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <figure>
+                                        <img src="<?php echo base_url('Data/gallery/index.png');?>" alt="控制台页">
+                                        <figcaption>
+                                            <h3>2.控制台页</h3>
+                                            <span> zhihua_w </span>
+                                            <a class="fancybox" data-fancybox-group="group" href="<?php echo base_url('Data/gallery/index.png');?>">Read</a>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="background-btn">
+                                        <a class="btn btn-primary fa fa-pencil" href="">&nbsp;&nbsp;修改</a>
+                                        <a class="btn btn-danger fa fa-trash-o" >&nbsp;&nbsp;删除</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <figure>
+                                        <img src="<?php echo base_url('Data/gallery/setting.png');?>" alt="网站设置页">
+                                        <figcaption>
+                                            <h3>3.网站设置页</h3>
+                                            <span> zhihua_w </span>
+                                            <a class="fancybox" data-fancybox-group="group" href="<?php echo base_url('Data/gallery/setting.png');?>">Read</a>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="background-btn">
+                                        <a class="btn btn-primary fa fa-pencil" href="">&nbsp;&nbsp;修改</a>
+                                        <a class="btn btn-danger fa fa-trash-o" >&nbsp;&nbsp;删除</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- END ROW  -->
+        </section>
+        <!-- END WRAPPER  -->
+    </section>
+    <!-- END MAIN CONTENT -->
+    <!-- BEGIN FOOTER -->
+    <?php $this->load->view('Public/footer.html');?>
+    <!-- END FOOTER -->
+</section>
+<!-- END SECTION -->
+<!-- BEGIN JS -->
+<?php $this->load->view('Public/footjs.html');?>
+<script src="<?php echo base_url('Public/Wei/js/weiadmin/setting.js');?>"></script>
+<!-- Weiadmin SETTING JS -->
+<script src="<?php echo base_url('Public/Wei/assets/fancybox/source/jquery.fancybox.js');?>"></script>
+<!-- FANCYBOX JS -->
+<script src="<?php echo base_url('Public/Wei/js/modernizr.custom.js');?>"></script>
+<!-- MORDERNIZR JS -->
+<script src="<?php echo base_url('Public/Wei/js/toucheffects.js');?>"></script>
+<!-- TOUCH EFFECTS JS -->
+<script>
+    $(function () {
+        jQuery(".fancybox").fancybox();
+    });
+</script>
+<!-- END JS -->
 </body>
+
 </html>
