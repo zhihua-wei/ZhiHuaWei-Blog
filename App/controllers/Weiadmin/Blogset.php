@@ -102,6 +102,13 @@ class Blogset extends Wei_Controller
         $this->load->view('carousel.html', $data);
     }
 
+    /**
+     * 新增轮暴图
+     */
+    public function carousel_add()
+    {
+    }
+
 
     public function index($offset = '')
     {
