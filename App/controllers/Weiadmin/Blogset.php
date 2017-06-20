@@ -78,6 +78,20 @@ class Blogset extends Wei_Controller
     {
     }
 
+    /**
+     * 修改背景图
+     */
+    public function background_edit()
+    {
+    }
+
+    /**
+     * 保存背景图
+     */
+    public function background_update()
+    {
+    }
+
 
     /**
      * 轮播图设置
