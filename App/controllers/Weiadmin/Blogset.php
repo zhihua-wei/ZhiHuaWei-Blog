@@ -103,7 +103,7 @@ class Blogset extends Wei_Controller
     }
 
     /**
-     * 新增轮暴图
+     * 新增轮播图
      */
     public function carousel_add()
     {
