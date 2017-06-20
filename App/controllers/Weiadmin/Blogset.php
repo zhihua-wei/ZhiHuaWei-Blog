@@ -122,6 +122,7 @@ class Blogset extends Wei_Controller
      */
     public function carousel_update()
     {
+
     }
 
 
