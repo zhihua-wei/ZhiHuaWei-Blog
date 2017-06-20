@@ -109,6 +109,13 @@ class Blogset extends Wei_Controller
     {
     }
 
+    /**
+     * 修改轮播图
+     */
+    public function carousel_edit()
+    {
+    }
+
 
     public function index($offset = '')
     {
