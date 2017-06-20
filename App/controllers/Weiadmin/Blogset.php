@@ -76,6 +76,7 @@ class Blogset extends Wei_Controller
      */
     public function background_add()
     {
+
     }
 
     /**
