@@ -77,8 +77,8 @@ class Blogset extends Wei_Controller
      */
     public function carousel()
     {
-        var_dump(111);
-        exit;
+        $data = $this->weiData;
+        $this->load->view('carousel.html', $data);
 
     }
 
