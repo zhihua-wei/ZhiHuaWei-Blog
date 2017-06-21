@@ -36,7 +36,7 @@ class Config_model extends CI_Model
      */
     public function get_blog_background_list()
     {
-        return $this->db->order_by('id', 'DESC')->get(self::TBL_BACKGROUND)->result_array();
+        return $this->db->order_by('background_id', 'DESC')->get(self::TBL_BACKGROUND)->result_array();
     }
 
     /**
