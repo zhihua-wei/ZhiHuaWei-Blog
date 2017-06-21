@@ -68,8 +68,8 @@
                                         </figcaption>
                                     </figure>
                                     <div class="background-btn">
-                                        <a class="btn btn-primary fa fa-pencil" href="">&nbsp;&nbsp;修改</a>
-                                        <a class="btn btn-danger fa fa-trash-o" >&nbsp;&nbsp;删除</a>
+                                        <a href="<?php echo site_url('Weiadmin/Blogset/background_edit').'/'.$item['background_id'];?>" class="btn btn-primary fa fa-pencil">&nbsp;&nbsp;修改</a>
+                                        <a val="<?php echo site_url('Weiadmin/Blogset/background_del').'/'.$item['background_id'];?>" class="btn btn-danger fa fa-trash-o background_del" >&nbsp;&nbsp;删除</a>
                                     </div>
                                 </li>
                                 <?php endforeach;?>
@@ -101,6 +101,14 @@
 <script>
     $(function () {
         jQuery(".fancybox").fancybox();
+        $(".background_del").click(function() {
+            var url = $(this).attr('val');
+            layer.confirm('确定要删除此背景图吗？', {
+                btn: ['确定', '取消'] //按钮
+            }, function() {
+                window.location.href = url;
+            }, function() {});
+        });
     });
 </script>
 <!-- END JS -->
