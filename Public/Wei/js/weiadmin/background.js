@@ -38,7 +38,7 @@ var Script = function () {
             messages: {
                 background_name: "请输入背景图名称",
                 background_desc: "请输入背景图描述",
-                background_pic: "请输入背景图描述"
+                background_pic: "请选择上传背景图"
             }
         });
     });
