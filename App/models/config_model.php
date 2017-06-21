@@ -40,6 +40,17 @@ class Config_model extends CI_Model
     }
 
     /**
+     * 函数：获取博客背景图信息
+     * @param int $background_id 博客背景图id
+     * @return array 博客背景图信息
+     */
+    public function get_background_info($background_id)
+    {
+        $condition['background_id'] = $background_id;
+        return $this->db->where($condition)->get(self::TBL_BACKGROUND)->row_array();
+    }
+
+    /**
      * 函数：新增博客背景图
      * @param array $params 本博客背景图信息
      * @return bool

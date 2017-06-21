@@ -84,9 +84,11 @@ class Blogset extends Wei_Controller
     /**
      * 修改背景图
      */
-    public function background_edit()
+    public function background_edit($id)
     {
-
+        $data = $this->weiData;
+        $data['background_info'] = $this->con->get_background_info($id);
+        $this->load->view('background_edit.html', $data);
     }
 
 
