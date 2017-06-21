@@ -31,6 +31,15 @@ class Config_model extends CI_Model
     }
 
     /**
+     * 函数：获取博客背景图列表
+     * @return array
+     */
+    public function get_blog_background_list()
+    {
+        return $this->db->order_by('id', 'DESC')->get(self::TBL_BACKGROUND)->result_array();
+    }
+
+    /**
      * 函数：新增博客背景图
      * @param array $params 本博客背景图信息
      * @return bool
