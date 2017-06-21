@@ -11,17 +11,17 @@
  */
 
 //表单提交验证
-var Script = function() {
+var Script = function () {
 
     'use strict';
 
     $.validator.setDefaults({
-        submitHandler: function(form) {
+        submitHandler: function (form) {
             form.submit();
         }
     });
 
-    $().ready(function() {
+    $().ready(function () {
         $("#backgroundForm").validate({
             rules: {
                 background_name: {
@@ -30,11 +30,15 @@ var Script = function() {
                 background_desc: {
                     required: true,
                 },
+                background_pic: {
+                    required: true,
+                }
             },
 
             messages: {
                 background_name: "请输入背景图名称",
                 background_desc: "请输入背景图描述",
+                background_pic: "请输入背景图描述"
             }
         });
     });
