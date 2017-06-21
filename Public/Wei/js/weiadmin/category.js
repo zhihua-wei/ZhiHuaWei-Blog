@@ -4,7 +4,7 @@
  * Author: ZhiHua_Wei <zhihua_wei@foxmail.com>
  * Date: 2017/6/19
  * Time: 下午 5:54
- * Project: Weiadmin后台管理系统
+ * Project: ZhiHuaWei-Blog 系统
  * Version: 1.0.0
  * Power: category.js
  * ==========================================
