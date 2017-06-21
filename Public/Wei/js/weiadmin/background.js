@@ -45,16 +45,16 @@ var Script = function () {
         $("#background_editForm").validate({
             rules: {
                 background_name: {
-                    required: true,
+                    required: true
                 },
                 background_desc: {
-                    required: true,
-                },
+                    required: true
+                }
             },
 
             messages: {
                 background_name: "请输入背景图名称",
-                background_desc: "请输入背景图描述",
+                background_desc: "请输入背景图描述"
             }
         });
     });
