@@ -60,7 +60,6 @@ var Script = function () {
         });
     });
 
-
     $().ready(function () {
         $("#carouseladdForm").validate({
             rules: {
@@ -74,7 +73,6 @@ var Script = function () {
                     required: true,
                 }
             },
-
             messages: {
                 carousel_name: "请输入轮播图名称",
                 carousel_desc: "请输入轮播图描述",
