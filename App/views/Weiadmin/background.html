@@ -64,7 +64,7 @@
                                         <figcaption>
                                             <h3><?php echo $item['background_name'];?></h3>
                                             <span><?php echo date("Y-m-d H:i:s",$item['add_time']);?></span>
-                                            <a class="fancybox" data-fancybox-group="group" href="<?php echo base_url('Data/gallery/login.png');?>">查看大图</a>
+                                            <a class="fancybox" data-fancybox-group="group" href="<?php echo base_url($item['background_url']);?>">查看大图</a>
                                         </figcaption>
                                     </figure>
                                     <div class="background-btn">
