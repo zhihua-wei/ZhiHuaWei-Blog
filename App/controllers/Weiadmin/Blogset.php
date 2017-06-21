@@ -100,7 +100,7 @@ class Blogset extends Wei_Controller
         $params['background_desc'] = $this->input->post('background_desc');
         $params['add_time'] = time();
         if (!empty($_FILES['background_pic']['tmp_name'])) {
-            $background_pic = $this->pic_upload($_FILES['logo'], "Data/upload/background/", "background_pic", "Weiadmin/Blogset/background");
+            $background_pic = $this->pic_upload($_FILES['background_pic'], "Data/upload/background/", "background_pic", "Weiadmin/Blogset/background");
             if ($background_pic) {
                 $params['background_url'] = $background_pic;
             }
