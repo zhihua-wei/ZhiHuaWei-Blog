@@ -62,7 +62,7 @@ class Config_model extends CI_Model
 
     /**
      * 函数：修改博客背景图
-     * @param int $background_id id
+     * @param int $background_id 博客背景图id
      * @param array $params 博客背景图信息
      * @return bool
      */
@@ -70,6 +70,17 @@ class Config_model extends CI_Model
     {
         $condition['background_id'] = $background_id;
         return $this->db->where($condition)->update(self::TBL_BACKGROUND, $params);
+    }
+
+    /**
+     * 函数：删除博客背景图
+     * @param int $background_id 博客背景图id
+     * @return bool
+     */
+    public function del_background($background_id)
+    {
+        $condition['background_id'] = $background_id;
+        return $this->db->where($condition)->delete(self::TBL_BACKGROUND);
     }
 
 

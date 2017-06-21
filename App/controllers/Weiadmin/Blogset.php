@@ -92,6 +92,28 @@ class Blogset extends Wei_Controller
     }
 
     /**
+     * 删除背景图
+     */
+    public function background_del($id)
+    {
+        $data = $this->weiData;
+        if ($this->con->del_background($id)) {
+            $this->wei->add_log('删除背景图，ID：' . $id, $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
+            $success['msg'] = "删除背景图操作成功！";
+            $success['url'] = site_url("Weiadmin/Blogset/background");
+            $success['wait'] = 3;
+            $data['success'] = $success;
+            $this->load->view('success.html', $data);
+        } else {
+            $error['msg'] = "删除背景图操作失败！";
+            $error['url'] = site_url("Weiadmin/Blogset/background");
+            $error['wait'] = 3;
+            $data['error'] = $error;
+            $this->load->view('error.html', $data);
+        }
+    }
+
+    /**
      * 保存背景图
      */
     public function background_update()
