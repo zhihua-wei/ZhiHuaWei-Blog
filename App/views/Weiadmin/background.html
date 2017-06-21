@@ -57,12 +57,13 @@
                             </nav>
                             <!-- END NAV -->
                             <ul class="grid cs-style-3">
+                                <?php foreach($background_list as $item):?>
                                 <li>
                                     <figure>
-                                        <img src="<?php echo base_url('Data/gallery/login.png');?>" alt="登录页">
+                                        <img src="<?php echo base_url($item['background_url']);?>" alt="<?php echo $item['background_name'];?>">
                                         <figcaption>
-                                            <h3>1.登录页</h3>
-                                            <span> zhihua_w </span>
+                                            <h3><?php echo $item['background_name'];?></h3>
+                                            <span><?php echo date("Y-m-d H:i:s",$item['add_time']);?></span>
                                             <a class="fancybox" data-fancybox-group="group" href="<?php echo base_url('Data/gallery/login.png');?>">Read</a>
                                         </figcaption>
                                     </figure>
@@ -71,6 +72,7 @@
                                         <a class="btn btn-danger fa fa-trash-o" >&nbsp;&nbsp;删除</a>
                                     </div>
                                 </li>
+                                <?php endforeach;?>
                                 <li>
                                     <figure>
                                         <img src="<?php echo base_url('Data/gallery/index.png');?>" alt="控制台页">
