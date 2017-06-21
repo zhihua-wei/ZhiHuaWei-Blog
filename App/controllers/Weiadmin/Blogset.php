@@ -107,7 +107,7 @@ class Blogset extends Wei_Controller
         }
         if ($id) {
             //修改背景图
-            if ($this->con->insert_background($params)) {
+            if ($this->con->update_background($id, $params)) {
                 $this->wei->add_log('修改博客背景图：' . $params['background_name'], $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
                 $success['msg'] = "修改博客背景图成功！";
                 $success['url'] = site_url("Weiadmin/Blogset/background");

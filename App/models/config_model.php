@@ -46,7 +46,7 @@ class Config_model extends CI_Model
      * @param array $params 博客背景图信息
      * @return bool
      */
-    public function update_category($background_id, $params)
+    public function update_background($background_id, $params)
     {
         $condition['background_id'] = $background_id;
         return $this->db->where($condition)->update(self::TBL_BACKGROUND, $params);
