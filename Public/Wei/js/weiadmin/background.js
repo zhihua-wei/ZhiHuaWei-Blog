@@ -22,7 +22,7 @@ var Script = function () {
     });
 
     $().ready(function () {
-        $("#backgroundForm").validate({
+        $("#background_addForm").validate({
             rules: {
                 background_name: {
                     required: true,
