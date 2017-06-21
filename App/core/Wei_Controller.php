@@ -152,8 +152,7 @@ class Wei_Controller extends CI_Controller
             $this->load->library('upload', $config);
             if ($this->upload->do_upload($name)) {
                 $pic_info = $this->upload->data();
-                $path_info = $dir . "/";
-                return $path_info . $pic_info['file_name'];
+                return $dir . $pic_info['file_name'];
             } else {
                 $error['msg'] = $this->upload->display_errors();
                 $error['url'] = site_url($url);
