@@ -22,7 +22,7 @@ var Script = function () {
     });
 
     $().ready(function () {
-        $("#background_addForm").validate({
+        $("#backgroundaddForm").validate({
             rules: {
                 background_name: {
                     required: true,
@@ -44,7 +44,7 @@ var Script = function () {
     });
 
     $().ready(function () {
-        $("#background_editForm").validate({
+        $("#backgroundeditForm").validate({
             rules: {
                 background_name: {
                     required: true
