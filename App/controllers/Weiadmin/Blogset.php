@@ -76,7 +76,8 @@ class Blogset extends Wei_Controller
      */
     public function background_add()
     {
-
+        $data = $this->weiData;
+        $this->load->view('background_add.html', $data);
     }
 
     /**
@@ -110,7 +111,8 @@ class Blogset extends Wei_Controller
      */
     public function carousel_add()
     {
-
+        $data = $this->weiData;
+        $this->load->view('carousel.html', $data);
     }
 
     /**
