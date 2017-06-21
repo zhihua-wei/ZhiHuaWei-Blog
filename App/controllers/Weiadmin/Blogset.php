@@ -165,7 +165,6 @@ class Blogset extends Wei_Controller
 
     }
 
-
     /**
      * 轮播图设置
      */
@@ -181,7 +180,7 @@ class Blogset extends Wei_Controller
     public function carousel_add()
     {
         $data = $this->weiData;
-        $this->load->view('carousel.html', $data);
+        $this->load->view('carousel_add.html', $data);
     }
 
     /**
