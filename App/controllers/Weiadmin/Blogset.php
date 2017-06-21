@@ -97,6 +97,22 @@ class Blogset extends Wei_Controller
      */
     public function background_update()
     {
+        $data = $this->weiData;
+        $id = $this->input->post('id');
+        $params['background_name'] = $this->input->post('background_name');
+        $params['background_desc'] = $this->input->post('background_desc');
+        $params['add_time'] = time();
+        if (!empty($_FILES['background_pic']['tmp_name'])) {
+            $background_pic = $this->pic_upload($_FILES['logo'], "Data/upload/background/", "background_pic", "Weiadmin/Blogset/background");
+            if ($background_pic) {
+                $params['background_url'] = $background_pic;
+            }
+        }
+        if($id){
+            //修改背景图
+        }else{
+            //新增背景图
+        }
 
     }
 
