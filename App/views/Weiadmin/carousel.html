@@ -50,55 +50,29 @@
                                 <form class="navbar-form form-inline" role="search" style="border: none">
                                     <div class="form-group pull-right">
                                         <a href="<?php echo site_url('Weiadmin/Blogset/carousel_add');?>" class="btn btn-primary pull-right">
-                                            <i class="fa fa-plus"></i> 新增轮播图
+                                            <i class="fa fa-plus"></i> 新增背景图
                                         </a>
                                     </div>
                                 </form>
                             </nav>
                             <!-- END NAV -->
                             <ul class="grid cs-style-3">
+                                <?php foreach($carousel_list as $item):?>
                                 <li>
                                     <figure>
-                                        <img src="<?php echo base_url('Data/gallery/login.png');?>" alt="登录页">
+                                        <img src="<?php echo base_url($item['carousel_url']);?>" alt="<?php echo $item['carousel_name'];?>">
                                         <figcaption>
-                                            <h3>1.登录页</h3>
-                                            <span> zhihua_w </span>
-                                            <a class="fancybox" data-fancybox-group="group" href="<?php echo base_url('Data/gallery/login.png');?>">Read</a>
+                                            <h3><?php echo $item['carousel_name'];?></h3>
+                                            <span><?php echo date("Y-m-d H:i:s",$item['add_time']);?></span>
+                                            <a class="fancybox" data-fancybox-group="group" href="<?php echo base_url($item['carousel_url']);?>">查看大图</a>
                                         </figcaption>
                                     </figure>
-                                    <div class="background-btn">
-                                        <a class="btn btn-primary fa fa-pencil" href="">&nbsp;&nbsp;修改</a>
-                                        <a class="btn btn-danger fa fa-trash-o" >&nbsp;&nbsp;删除</a>
+                                    <div class="carousel-btn">
+                                        <a href="<?php echo site_url('Weiadmin/Blogset/carousel_edit').'/'.$item['carousel_id'];?>" class="btn btn-primary fa fa-pencil">&nbsp;&nbsp;修改</a>
+                                        <a val="<?php echo site_url('Weiadmin/Blogset/carousel_del').'/'.$item['carousel_id'];?>" class="btn btn-danger fa fa-trash-o carousel_del" >&nbsp;&nbsp;删除</a>
                                     </div>
                                 </li>
-                                <li>
-                                    <figure>
-                                        <img src="<?php echo base_url('Data/gallery/index.png');?>" alt="控制台页">
-                                        <figcaption>
-                                            <h3>2.控制台页</h3>
-                                            <span> zhihua_w </span>
-                                            <a class="fancybox" data-fancybox-group="group" href="<?php echo base_url('Data/gallery/index.png');?>">Read</a>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="background-btn">
-                                        <a class="btn btn-primary fa fa-pencil" href="">&nbsp;&nbsp;修改</a>
-                                        <a class="btn btn-danger fa fa-trash-o" >&nbsp;&nbsp;删除</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <img src="<?php echo base_url('Data/gallery/setting.png');?>" alt="网站设置页">
-                                        <figcaption>
-                                            <h3>3.网站设置页</h3>
-                                            <span> zhihua_w </span>
-                                            <a class="fancybox" data-fancybox-group="group" href="<?php echo base_url('Data/gallery/setting.png');?>">Read</a>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="background-btn">
-                                        <a class="btn btn-primary fa fa-pencil" href="">&nbsp;&nbsp;修改</a>
-                                        <a class="btn btn-danger fa fa-trash-o" >&nbsp;&nbsp;删除</a>
-                                    </div>
-                                </li>
+                                <?php endforeach;?>
                             </ul>
                         </div>
                     </section>
@@ -127,6 +101,14 @@
 <script>
     $(function () {
         jQuery(".fancybox").fancybox();
+        $(".carousel_del").click(function() {
+            var url = $(this).attr('val');
+            layer.confirm('确定要删除此背景图吗？', {
+                btn: ['确定', '取消'] //按钮
+            }, function() {
+                window.location.href = url;
+            }, function() {});
+        });
     });
 </script>
 <!-- END JS -->
