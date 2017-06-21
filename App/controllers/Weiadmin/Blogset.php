@@ -171,6 +171,7 @@ class Blogset extends Wei_Controller
     public function carousel()
     {
         $data = $this->weiData;
+        $data['carousel_list'] = $this->con->get_blog_carousel_list();
         $this->load->view('carousel.html', $data);
     }
 
