@@ -196,7 +196,50 @@ class Blogset extends Wei_Controller
      */
     public function carousel_update()
     {
-
+        $data = $this->weiData;
+        $id = $this->input->post('id');
+        $params['carousel_name'] = $this->input->post('carousel_name');
+        $params['carousel_desc'] = $this->input->post('carousel_desc');
+        $params['add_time'] = time();
+        if (!empty($_FILES['carousel_pic']['tmp_name'])) {
+            $carousel_pic = $this->pic_upload($_FILES['carousel_pic'], "Data/upload/carousel/", "carousel_pic", "Weiadmin/Blogset/carousel");
+            if ($carousel_pic) {
+                $params['carousel_url'] = $carousel_pic;
+            }
+        }
+        if ($id) {
+            //修改背景图
+            if ($this->con->update_carousel($id, $params)) {
+                $this->wei->add_log('修改博客轮播图：' . $params['carousel_name'], $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
+                $success['msg'] = "修改博客轮播图成功！";
+                $success['url'] = site_url("Weiadmin/Blogset/carousel");
+                $success['wait'] = 3;
+                $data['success'] = $success;
+                $this->load->view('success.html', $data);
+            } else {
+                $error['msg'] = "修改博客轮播图失败！";
+                $error['url'] = site_url("Weiadmin/Blogset/carousel");
+                $error['wait'] = 3;
+                $data['error'] = $error;
+                $this->load->view('error.html', $data);
+            }
+        } else {
+            //新增背景图
+            if ($this->con->insert_carousel($params)) {
+                $this->wei->add_log('新增轮播背景图：' . $params['carousel_name'], $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
+                $success['msg'] = "新增轮播背景图成功！";
+                $success['url'] = site_url("Weiadmin/Blogset/carousel");
+                $success['wait'] = 3;
+                $data['success'] = $success;
+                $this->load->view('success.html', $data);
+            } else {
+                $error['msg'] = "新增博客轮播图失败！";
+                $error['url'] = site_url("Weiadmin/Blogset/carousel");
+                $error['wait'] = 3;
+                $data['error'] = $error;
+                $this->load->view('error.html', $data);
+            }
+        }
     }
 
 

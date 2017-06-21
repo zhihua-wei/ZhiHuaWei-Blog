@@ -16,6 +16,7 @@ class Config_model extends CI_Model
 {
     const TBL_CONFIG = 'blog_config';
     const TBL_BACKGROUND = 'blog_background';
+    const TBL_CAROUSEL = 'blog_carousel';
 
     /**
      * 函数：更新博客设置信息
@@ -81,6 +82,60 @@ class Config_model extends CI_Model
     {
         $condition['background_id'] = $background_id;
         return $this->db->where($condition)->delete(self::TBL_BACKGROUND);
+    }
+
+
+    /**
+     * 函数：获取博客轮播图列表
+     * @return array
+     */
+    public function get_blog_carousel_list()
+    {
+        return $this->db->order_by('carousel_id', 'DESC')->get(self::TBL_CAROUSEL)->result_array();
+    }
+
+    /**
+     * 函数：获取博客轮播图信息
+     * @param int $carousel_id 博客轮播图id
+     * @return array 博客轮播图信息
+     */
+    public function get_carousel_info($carousel_id)
+    {
+        $condition['carousel_id'] = $carousel_id;
+        return $this->db->where($condition)->get(self::TBL_CAROUSEL)->row_array();
+    }
+
+    /**
+     * 函数：新增博客轮播图
+     * @param array $params 本博客轮播图信息
+     * @return bool
+     */
+    public function insert_carousel($params)
+    {
+        return $this->db->insert(self::TBL_CAROUSEL, $params);
+    }
+
+    /**
+     * 函数：修改博客轮播图
+     * @param int $carousel_id 博客轮播图id
+     * @param array $params 博客轮播图信息
+     * @return bool
+     */
+    public function update_carousel($carousel_id, $params)
+    {
+        $condition['carousel_id'] = $carousel_id;
+        return $this->db->where($condition)->update(self::TBL_CAROUSEL, $params);
+    }
+
+    /**
+     * 函数：删除博客轮播图
+     * @param int $carousel_id 博客轮播图id
+     * @return bool
+     */
+    public function del_carousel($carousel_id)
+    {
+        $condition['carousel_id'] = $carousel_id;
+        return $this->db->where($condition)->delete(self::TBL_CAROUSEL);
     }
 
 
