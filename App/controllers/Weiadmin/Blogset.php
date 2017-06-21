@@ -186,9 +186,11 @@ class Blogset extends Wei_Controller
     /**
      * 修改轮播图
      */
-    public function carousel_edit()
+    public function carousel_edit($id)
     {
-
+        $data = $this->weiData;
+        $data['carousel'] = $this->con->get_carousel_info($id);
+        $this->load->view('carousel_edit.html', $data);
     }
 
     /**

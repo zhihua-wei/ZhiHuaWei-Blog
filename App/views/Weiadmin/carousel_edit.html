@@ -41,28 +41,28 @@
                         </header>
                         <div class="panel-body">
                             <div class="form">
-                                <form class="cmxform form-horizontal tasi-form" id="backgroundeditForm" method="post" action="<?php echo site_url('Weiadmin/Blogset/background_update');?>" enctype="multipart/form-data">
+                                <form class="cmxform form-horizontal tasi-form" id="carouseleditForm" method="post" action="<?php echo site_url('Weiadmin/Blogset/carousel_update');?>" enctype="multipart/form-data">
 
                                     <div class="form-group">
-                                        <label for="background_name" class="control-label col-sm-2">背景图名称</label>
+                                        <label for="carousel_name" class="control-label col-sm-2">背景图名称</label>
                                         <div class="col-sm-4">
-                                            <input class="form-control" id="background_name" name="background_name" type="text" value="<?php echo $background['background_name'];?>">
+                                            <input class="form-control" id="carousel_name" name="carousel_name" type="text" value="<?php echo $carousel['carousel_name'];?>">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="background_desc" class="control-label col-sm-2">背景图描述</label>
+                                        <label for="carousel_desc" class="control-label col-sm-2">背景图描述</label>
                                         <div class="col-sm-4">
-                                            <textarea class="form-control" id="background_desc" name="background_desc" rows="5"><?php echo $background['background_desc'];?></textarea>
+                                            <textarea class="form-control" id="carousel_desc" name="carousel_desc" rows="5"><?php echo $carousel['carousel_desc'];?></textarea>
                                         </div>
                                     </div>
 
                                     <div class="form-group last">
-                                        <label for="background_pic" class="control-label col-sm-2">背景图片</label>
+                                        <label for="carousel_pic" class="control-label col-sm-2">背景图片</label>
                                         <div class="col-sm-4">
                                             <div class="fileupload fileupload-new" data-provides="fileupload">
                                                 <div class="fileupload-new thumbnail">
-                                                    <img src="<?php if(!empty($background['background_url'])){echo base_url($background['background_url']);}else{echo base_url('Public/Wei/img/no_image.png');}?>">
+                                                    <img src="<?php if(!empty($carousel['carousel_url'])){echo base_url($carousel['carousel_url']);}else{echo base_url('Public/Wei/img/no_image.png');}?>">
                                                 </div>
                                                 <div class="fileupload-preview fileupload-exists thumbnail">
                                                 </div>
@@ -74,7 +74,7 @@
                                                     <span class="fileupload-exists">
                                                         <i class="fa fa-undo"></i> 重置
                                                     </span>
-                                                    <input type="file" class="default" id="background_pic" name="background_pic">
+                                                    <input type="file" class="default" id="carousel_pic" name="carousel_pic">
                                                     </span>
                                                     <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">
                                                         <i class="fa fa-trash"></i> 删除
@@ -86,7 +86,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="hidden" name="id" id="id" value="<?php echo $background['background_id'];?>">
+                                        <input type="hidden" name="id" id="id" value="<?php echo $carousel['carousel_id'];?>">
                                         <div class="col-sm-offset-2 col-sm-10">
                                             <button class="btn btn-primary" type="submit">保存</button>
                                             <button class="btn btn-default" type="reset">重置</button>
