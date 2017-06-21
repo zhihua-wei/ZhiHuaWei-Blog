@@ -88,6 +88,10 @@ class Blogset extends Wei_Controller
 
     }
 
+
+
+
+
     /**
      * 保存背景图
      */
