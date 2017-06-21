@@ -107,8 +107,36 @@ class Blogset extends Wei_Controller
         }
         if ($id) {
             //修改背景图
+            if ($this->con->insert_background($params)) {
+                $this->wei->add_log('修改博客背景图：' . $params['background_name'], $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
+                $success['msg'] = "修改博客背景图成功！";
+                $success['url'] = site_url("Weiadmin/Blogset/background");
+                $success['wait'] = 3;
+                $data['success'] = $success;
+                $this->load->view('success.html', $data);
+            } else {
+                $error['msg'] = "修改博客背景图失败！";
+                $error['url'] = site_url("Weiadmin/Blogset/background");
+                $error['wait'] = 3;
+                $data['error'] = $error;
+                $this->load->view('error.html', $data);
+            }
         } else {
             //新增背景图
+            if ($this->con->insert_background($params)) {
+                $this->wei->add_log('新增博客背景图：' . $params['background_name'], $this->ADMINISTRSTORS['admin_id'], $this->ADMINISTRSTORS['username']);
+                $success['msg'] = "新增博客背景图成功！";
+                $success['url'] = site_url("Weiadmin/Blogset/background");
+                $success['wait'] = 3;
+                $data['success'] = $success;
+                $this->load->view('success.html', $data);
+            } else {
+                $error['msg'] = "新增博客背景图失败！";
+                $error['url'] = site_url("Weiadmin/Blogset/background");
+                $error['wait'] = 3;
+                $data['error'] = $error;
+                $this->load->view('error.html', $data);
+            }
         }
 
     }
