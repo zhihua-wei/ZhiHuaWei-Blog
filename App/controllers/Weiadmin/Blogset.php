@@ -91,7 +91,6 @@ class Blogset extends Wei_Controller
         $this->load->view('background_edit.html', $data);
     }
 
-
     /**
      * 保存背景图
      */
