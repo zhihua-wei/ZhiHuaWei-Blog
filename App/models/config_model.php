@@ -15,6 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Config_model extends CI_Model
 {
     const TBL_CONFIG = 'blog_config';
+    const TBL_BACKGROUND = 'blog_background';
 
     /**
      * 函数：更新博客设置信息
@@ -27,6 +28,16 @@ class Config_model extends CI_Model
             $data['value'] = $val;
             $this->db->where($condition)->update(self::TBL_CONFIG, $data);
         }
+    }
+
+    /**
+     * 函数：新增博客背景图
+     * @param array $params 本博客背景图信息
+     * @return bool
+     */
+    public function insert_background($params)
+    {
+        return $this->db->insert(self::TBL_BACKGROUND, $params);
     }
 
 

@@ -89,9 +89,6 @@ class Blogset extends Wei_Controller
     }
 
 
-
-
-
     /**
      * 保存背景图
      */
@@ -108,9 +105,9 @@ class Blogset extends Wei_Controller
                 $params['background_url'] = $background_pic;
             }
         }
-        if($id){
+        if ($id) {
             //修改背景图
-        }else{
+        } else {
             //新增背景图
         }
 
@@ -150,7 +147,6 @@ class Blogset extends Wei_Controller
     {
 
     }
-
 
 
     public function index($offset = '')
