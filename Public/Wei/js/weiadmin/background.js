@@ -41,7 +41,9 @@ var Script = function () {
                 background_pic: "请选择上传背景图"
             }
         });
+    });
 
+    $().ready(function () {
         $("#background_editForm").validate({
             rules: {
                 background_name: {
@@ -51,7 +53,6 @@ var Script = function () {
                     required: true
                 }
             },
-
             messages: {
                 background_name: "请输入背景图名称",
                 background_desc: "请输入背景图描述"
