@@ -22,31 +22,19 @@ var Script = function() {
     });
 
     $().ready(function() {
-        $("#articleForm").validate({
+        $("#backgroundForm").validate({
             rules: {
-                category_id: {
+                background_name: {
                     required: true,
                 },
-                keywords: {
-                    required: true,
-                },
-                article_title: {
-                    required: true,
-                },
-                article_desc: {
-                    required: true,
-                },
-                content: {
+                background_desc: {
                     required: true,
                 },
             },
 
             messages: {
-                category_id: "请选择文章分类",
-                keywords: "请为分类输入简要关键字！",
-                article_title: "请输入文章名称！！",
-                article_desc: "请输入文档的简单摘要！",
-                content:"请输入文章正文内容！"
+                background_name: "请输入背景图名称",
+                background_desc: "请输入背景图描述",
             }
         });
     });
