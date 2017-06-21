@@ -60,4 +60,44 @@ var Script = function () {
         });
     });
 
+
+    $().ready(function () {
+        $("#carouseladdForm").validate({
+            rules: {
+                carousel_name: {
+                    required: true,
+                },
+                carousel_desc: {
+                    required: true,
+                },
+                carousel_pic: {
+                    required: true,
+                }
+            },
+
+            messages: {
+                carousel_name: "请输入轮播图名称",
+                carousel_desc: "请输入轮播图描述",
+                carousel_pic: "请选择上传轮播图"
+            }
+        });
+    });
+
+    $().ready(function () {
+        $("#carouseleditForm").validate({
+            rules: {
+                carousel_name: {
+                    required: true
+                },
+                carousel_desc: {
+                    required: true
+                }
+            },
+            messages: {
+                carousel_name: "请输入轮播图名称",
+                carousel_desc: "请输入轮播图描述"
+            }
+        });
+    });
+
 }();
