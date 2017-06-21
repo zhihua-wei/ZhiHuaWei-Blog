@@ -50,7 +50,7 @@
                                 <form class="navbar-form form-inline" role="search" style="border: none">
                                     <div class="form-group pull-right">
                                         <a href="<?php echo site_url('Weiadmin/Blogset/carousel_add');?>" class="btn btn-primary pull-right">
-                                            <i class="fa fa-plus"></i> 新增背景图
+                                            <i class="fa fa-plus"></i> 新增轮播图
                                         </a>
                                     </div>
                                 </form>
@@ -103,7 +103,7 @@
         jQuery(".fancybox").fancybox();
         $(".carousel_del").click(function() {
             var url = $(this).attr('val');
-            layer.confirm('确定要删除此背景图吗？', {
+            layer.confirm('确定要删除此轮播图吗？', {
                 btn: ['确定', '取消'] //按钮
             }, function() {
                 window.location.href = url;
