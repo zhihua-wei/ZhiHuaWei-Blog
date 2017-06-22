@@ -84,7 +84,6 @@ class Config_model extends CI_Model
         return $this->db->where($condition)->delete(self::TBL_BACKGROUND);
     }
 
-
     /**
      * 函数：获取博客轮播图列表
      * @return array
@@ -137,6 +136,5 @@ class Config_model extends CI_Model
         $condition['carousel_id'] = $carousel_id;
         return $this->db->where($condition)->delete(self::TBL_CAROUSEL);
     }
-
 
 }
