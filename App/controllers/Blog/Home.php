@@ -9,9 +9,9 @@ class Home extends CI_Controller
     public function index()
     {
 
-        echo 1111111;
+        //echo 1111111;
 
-        //$this -> load -> view('welcome.html');
+        $this -> load -> view('index.html');
 
     }
 
