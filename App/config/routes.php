@@ -50,6 +50,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  |		my-controller/my-method	-> my_controller/my_method
  */
  
-$route['default_controller'] = 'Weiadmin/Login/index';
+$route['default_controller'] = 'Blog/Home/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
