@@ -3,14 +3,11 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller
+class Home extends Home_Controller
 {
 
     public function index()
     {
-
-        //echo 1111111;
-
         $this -> load -> view('index.html');
 
     }
