@@ -10,3 +10,9 @@
  * Power: 博客前台模型
  * ====================================================
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Blog_model extends CI_Model
+{
+
+}
