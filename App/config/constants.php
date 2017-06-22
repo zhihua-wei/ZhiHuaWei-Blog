@@ -96,9 +96,9 @@ defined('EXIT__AUTO_MIN') OR define('EXIT__AUTO_MIN', 9);
 defined('EXIT__AUTO_MAX') OR define('EXIT__AUTO_MAX', 125);
 // highest automatically-assigned error code
 
-//定义前台视图路径常量
-define('HOME_VIEW_DIR', 'views/Home/');
-//定义后台视图路径常量
+//定义博客前台视图路径常量
+define('BLOG_VIEW_DIR', 'views/Blog/');
+//定义博客后台视图路径常量
 define('ADMIN_VIEW_DIR', 'views/Weiadmin/');
 //版本
 define('Weiadmin_VERSION', '1.0.0');
