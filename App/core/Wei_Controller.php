@@ -29,8 +29,10 @@ class Home_Controller extends CI_Controller
         parent::__construct();
         $this->load->set_home_view_dir();
         //获取博客设置
-
+        $this->homeData['config'] = $this->wei->get_config();
         //获取背景图设置
+        var_dump($this->homeData);
+        exit;
 
 
     }
