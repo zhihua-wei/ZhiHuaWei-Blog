@@ -62,7 +62,10 @@ class Wei_model extends CI_Model
     /**
      * 函数：获取博客背景图
      */
-    public function get_background(){}
+    public function get_background()
+    {
+        return $this->db->get(self::TBL_ADMIN)->row_array();
+    }
 
     /**
      * 函数：添加系统操作记录日志
