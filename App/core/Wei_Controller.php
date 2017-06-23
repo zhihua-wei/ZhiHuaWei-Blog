@@ -28,6 +28,11 @@ class Home_Controller extends CI_Controller
     {
         parent::__construct();
         $this->load->set_home_view_dir();
+        //获取博客设置
+
+        //获取背景图设置
+
+
     }
 
 }
