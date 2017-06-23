@@ -33,7 +33,6 @@
 
     <!-- PAGE OPENING ANIMATION -->
     <script type="text/javascript">
-
         //PAGE IS CLOSED ON START
         jQuery(document).ready(function(){
             jQuery('#page').css({'display':'inline','width':'300px','overflow':'hidden','margin-right':'340px'});
@@ -44,9 +43,7 @@
         jQuery(window).load(
                 function() {
                     jQuery('#hp_preloader').delay(800).animate({'opacity':'0'},1400,function(){
-
                         //HOMEPAGE NIVO SLIDER STARTS
-
                         jQuery('#slider-nivo').nivoSlider({
                             controlNav:true,
                             controlNavThumbs:false,
@@ -58,16 +55,11 @@
                             animSpeed:300,
                             pauseTime:4000
                         });
-
-
-
                         //REMOVE LOADING
                         jQuery(this).remove();
-
                         //PAGE OPENING ANIMATION
                         jQuery('#sidebar').delay(800).animate({'margin-left':'0px'},2100);
                         jQuery('#page').delay(800).animate({'margin-right':'0px','width':'666px'},2100);
-
                     });
                 }
         );
