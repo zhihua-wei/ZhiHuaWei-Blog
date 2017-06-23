@@ -62,6 +62,7 @@ class Wei_model extends CI_Model
     /**
      * 函数：获取博客背景图
      */
+    public function get_background(){}
 
     /**
      * 函数：添加系统操作记录日志
