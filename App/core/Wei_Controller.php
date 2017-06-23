@@ -31,6 +31,7 @@ class Home_Controller extends CI_Controller
         //获取博客设置
         $this->homeData['config'] = $this->wei->get_config();
         //获取背景图设置
+        $this->homeData['background'] = $this->wei->get_background();
         var_dump($this->homeData);
 
         exit;
