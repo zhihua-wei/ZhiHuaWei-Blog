@@ -60,6 +60,10 @@ class Wei_model extends CI_Model
     }
 
     /**
+     * 函数：获取博客背景图
+     */
+
+    /**
      * 函数：添加系统操作记录日志
      * @param string $log 日志描述
      * @param int $admin_id 管理员id
