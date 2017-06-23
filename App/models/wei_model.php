@@ -62,6 +62,7 @@ class Wei_model extends CI_Model
 
     /**
      * 函数：获取博客背景图
+     * @return array 博客背景图列表
      */
     public function get_background()
     {
