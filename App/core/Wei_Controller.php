@@ -32,6 +32,7 @@ class Home_Controller extends CI_Controller
         $this->homeData['config'] = $this->wei->get_config();
         //获取背景图设置
         var_dump($this->homeData);
+
         exit;
 
 
