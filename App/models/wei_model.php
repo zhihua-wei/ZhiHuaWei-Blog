@@ -20,7 +20,7 @@ class Wei_model extends CI_Model
     const TBL_ADMIN = 'administrator';
     const TBL_SETTING = 'system_setting';
     const TBL_CONFIG = 'blog_config';
-    const TBL_BACKGROUND = 'blog_config';
+    const TBL_BACKGROUND = 'blog_background';
 
     /**
      * 函数：获取系统设置信息
