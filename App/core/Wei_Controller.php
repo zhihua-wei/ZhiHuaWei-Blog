@@ -35,8 +35,6 @@ class Home_Controller extends CI_Controller
         var_dump($this->homeData);
 
         exit;
-
-
     }
 
 }
