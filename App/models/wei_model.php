@@ -65,7 +65,7 @@ class Wei_model extends CI_Model
      */
     public function get_background()
     {
-        return $this->db->get(self::TBL_BACKGROUND)->row_array();
+        return $this->db->get(self::TBL_BACKGROUND)->result_array();
     }
 
     /**
