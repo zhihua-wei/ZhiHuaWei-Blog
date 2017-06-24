@@ -10,3 +10,9 @@
  * Power:  前台博客控制器
  * ====================================================
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Blog extends Home_Controller
+{
+
+}
