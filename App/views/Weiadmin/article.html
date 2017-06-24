@@ -78,10 +78,10 @@
 													<!--<?php echo $item['article_desc'];?>-->
 												<!--</td>-->
 												<td class="text-center ">
-													<?php echo $item['click_num'];?>
+													<?php echo date("Y-m-d H:i:s",$item['issue_time']);?>
 												</td>
 												<td class="text-center ">
-													<?php echo date("Y-m-d H:i:s",$item['issue_time']);?>
+													<?php echo $item['click_num'];?>
 												</td>
 												<td class="text-center ">
 													<a href="<?php echo site_url('Weiadmin/Article/edit').'/'.$item['article_id'];?>" class="btn btn-primary btn-xs" title="修改">
