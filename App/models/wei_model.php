@@ -75,7 +75,8 @@ class Wei_model extends CI_Model
      */
     public function get_blog_menu()
     {
-        return $this->db->get(self::TBL_BACKGROUND)->result_array();
+        $condition = array('is_show' => 1);
+        return $this->db->where($condition)->order_by('sort', 'ASC')->get(self::TBL_CATEGORY)->result_array();
     }
 
     /**
