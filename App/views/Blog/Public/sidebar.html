@@ -23,14 +23,11 @@
             <li class="current">
                 <a href="index.html">首页</a>
             </li>
+            <?php foreach($menu as $item):?>
             <li>
-                <a href="blog-1.html">BLOG</a>
+                <a href="blog-1.html"><?php echo $item['category_name'];?></a>
             </li>
-            <li>
-                <a href="portfolio-3c.html">PORTFOLIO</a>
-            </li>
-            <li>
-                <a href="gallery.html">GALLERY</a></li>
+            <?php endforeach;?>
             <li>
                 <a href="#">个人简历</a>
             </li>
@@ -39,7 +36,7 @@
     <!-- #sidebar-content ends -->
 
     <!-- SOCIAL ICONS ON SIDEBAR'S BOTTOM PART -->
-    <ul id="sidebar-bottom" style="bottom: 45px">
+    <ul id="sidebar-bottom" style="bottom: 55px">
         <li>
             <a href="#">
                 <img src="<?php echo base_url('Public/Blog/images/sidebar_icons/facebook.png');?>" alt=""/>
@@ -57,9 +54,11 @@
         </li>
     </ul>
     <!-- COPYRIGHT TEXT -->
-    <p id="copyright">Copyright ©
-        <a href="http://www.zhihuawei.cn/"><?php echo $config['author'];?></a>
-        2017, All Rigth Reserver.<br>
+    <p id="copyright">
+        Designed And Developed By ZHIHUAWEI<br>
+        Copyright ©  2017
+        <a href="http://www.zhihuawei.cn/"><?php echo $config['author'];?></a> .
+        All Rigth Reserver.<br>
         <a href="http://www.miitbeian.gov.cn" target="_blank">豫ICP备17011945号-1</a>
     </p>
 </div>
