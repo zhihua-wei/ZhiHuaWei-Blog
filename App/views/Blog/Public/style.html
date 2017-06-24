@@ -1,32 +1,24 @@
-<!-- TOPMENU ROW  -->
-<div class="row">
-	<div class="col-lg-12">
-		<ul class="breadcrumb">
-			<li>
-				<a href="<?php echo site_url('Weiadmin/Admin/index');?>"><i class="fa fa-home"></i>首页</a>
-			</li>
-			<li>»</li>
-			<li>
-				<a href="#">
-					<?php echo $current['ptitle'];?>
-				</a>
-			</li>
-			<li>»</li>
-			<li class="active">
-				<?php echo $current['title'];?>
-			</li>
-		</ul>
+<!-- STYLER FOR DEMO -->
+<div id="styler">
+	<div id="styler-button">
+		<a href="#">
+			<img src="<?php echo base_url('Public/Blog/images/styler-button.png');?>" alt="styler" />
+		</a>
 	</div>
+
+	<div class="styler-title">
+		<img src="<?php echo base_url('Public/Blog/images/styler-t1.png');?>" alt="" />
+	</div>
+
+	<ul id="texture">
+		<li><a href="#" id="styler-texture-1">None</a></li>
+		<li id="selected"><a href="#" id="styler-texture-2">Leather</a></li>
+		<li><a href="#" id="styler-texture-3">Carbon</a></li>
+	</ul>
+
+	<div class="styler-title">
+		<img src="<?php echo base_url('Public/Blog/images/styler-t2.png');?>" alt="" />
+	</div>
+
+	<div id="styler-colorpicker" class="colorpicker"></div>
 </div>
-<!-- TOPMENU ROW  -->
-<!-- ALERT TIPS -->
-<?php 
-	if($current['tips'] != ''){
-		echo '<div class="alert alert-success fade in">
-				<button data-dismiss="alert" class="close close-sm" type="button">
-          			<i class="fa fa-times"></i>
-          		</button>
-				<strong></strong>'.$current['tips'].'</div>';
-	}
-?>
-<!-- ALERT TIPS -->
