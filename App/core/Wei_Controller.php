@@ -33,7 +33,7 @@ class Home_Controller extends CI_Controller
         //获取背景图设置
         $this->homeData['background'] = $this->wei->get_background();
         //获取分类菜单
-
+        $this->homeData['menu'] = $this->wei->get_blog_menu();
 
         //var_dump($this->homeData);
         //exit;
