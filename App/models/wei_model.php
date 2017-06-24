@@ -21,6 +21,7 @@ class Wei_model extends CI_Model
     const TBL_SETTING = 'system_setting';
     const TBL_CONFIG = 'blog_config';
     const TBL_BACKGROUND = 'blog_background';
+    const TBL_CATEGORY = 'category';
 
     /**
      * 函数：获取系统设置信息
@@ -65,6 +66,14 @@ class Wei_model extends CI_Model
      * @return array 博客背景图列表
      */
     public function get_background()
+    {
+        return $this->db->get(self::TBL_BACKGROUND)->result_array();
+    }
+
+    /**
+     * 函数：获取分类菜单表
+     */
+    public function get_blog_menu()
     {
         return $this->db->get(self::TBL_BACKGROUND)->result_array();
     }

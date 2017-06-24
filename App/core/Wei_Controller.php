@@ -34,6 +34,7 @@ class Home_Controller extends CI_Controller
         $this->homeData['background'] = $this->wei->get_background();
         //获取分类菜单
 
+
         //var_dump($this->homeData);
         //exit;
     }
