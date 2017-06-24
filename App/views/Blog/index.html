@@ -2,34 +2,19 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <!-- BEGIN META -->
+    <?php $this->load->view('Public/headmeta.html');?>
+    <!-- END META -->
+    <!-- BEGIN STYLESHEET-->
+    <?php $this->load->view('Public/headcss.html');?>
+    <!-- END STYLESHEET-->
 
-    <title>mafiashare.net</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="description" content="Empire - XHTML Template" />
-
-    <!-- CSS -->
-    <link href="<?php echo base_url('Public/Blog/fonts/sansation.css');?>" rel="stylesheet" type="text/css" />	<!-- Get any font from here easily: http://www.google.com/webfonts -->
-    <link href="<?php echo base_url('Public/Blog/css/style.css');?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url('Public/Blog/fancybox/jquery.fancybox-1.3.4.css');?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url('Public/Blog/css/nivo-slider.css');?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url('Public/Blog/css/styler-farbtastic.css');?>" rel="stylesheet" type="text/css" />
-
-    <!-- UPDATE BROWSER WARNING IF IE 7 OR LOWER -->
-    <!--[if lt IE 8]>
-    <link href="<?php echo base_url('Public/Blog/css/stop_ie.css');?>" rel="stylesheet" type="text/css" />
-    <![endif]-->
+    <title><?php echo $config['title'].'-'.$config['webname'];?></title>
 
 
-    <!-- JAVASCRIPTS -->
-    <script type="text/javascript" src="<?php echo base_url('Public/Blog/js/jquery.min.js');?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('Public/Blog/js/jquery-ui-1.8.17.custom.min.js');?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('Public/Blog/fancybox/jquery.fancybox-1.3.4.pack.js');?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('Public/Blog/js/jquery.nivo.slider.js');?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('Public/Blog/js/jquery.bgslider.js');?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('Public/Blog/js/preloader.js');?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('Public/Blog/js/farbtastic.js');?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('Public/Blog/js/basic.js');?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('Public/Blog/js/styler.js');?>"></script>
+    <!-- BEGIN JS -->
+    <?php $this->load->view('Public/footjs.html');?>
+    <!-- END JS -->
 
     <!-- PAGE OPENING ANIMATION -->
     <script type="text/javascript">
