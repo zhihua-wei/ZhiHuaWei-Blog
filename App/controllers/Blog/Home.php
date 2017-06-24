@@ -9,6 +9,7 @@ class Home extends Home_Controller
     public function index()
     {
         $data = $this->homeData;
+
         $this->load->view('index.html', $data);
     }
 
