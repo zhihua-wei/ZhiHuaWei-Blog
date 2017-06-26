@@ -17,8 +17,8 @@ class Blog extends Home_Controller
     public function __construct()
     {
         parent::__construct();
-        //$this->load->model('blog_model', 'admin');
-        //$this->load->library('Blogpage', 'page');
+        $this->load->model('blog_model', 'blog');
+        $this->load->library('Blogpage', 'page');
     }
 
     public function test()
@@ -30,14 +30,9 @@ class Blog extends Home_Controller
     public function index($id, $offset = '')
     {
         $data = $this->homeData;
-
-        var_dump($id);
-        var_dump($offset);
-        exit;
-
         //配置分页信息
         $config['base_url'] = site_url('Blog/Blog/index/') . $id . "/";
-        $config['total_rows'] = $this->admin->get_log_count($this->ADMINISTRSTORS['admin_id']);
+        $config['total_rows'] = $this->blog->get_log_count($this->ADMINISTRSTORS['admin_id']);
         $config['per_page'] = 10;
 //        //初始化分类页
 //        $this->pagination->initialize($config);
