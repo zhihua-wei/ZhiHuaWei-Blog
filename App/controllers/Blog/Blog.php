@@ -18,7 +18,7 @@ class Blog extends Home_Controller
     {
         parent::__construct();
         $this->load->model('blog_model', 'blog');
-        $this->load->library('Blogpage', 'page');
+        $this->load->library('blogpage', 'page');
     }
 
     public function test()
