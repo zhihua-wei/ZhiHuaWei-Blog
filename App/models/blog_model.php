@@ -17,5 +17,18 @@ class Blog_model extends CI_Model
 {
     const TBL_ARTICLE = 'blog_article';
 
+    /**
+     * 函数：获取文章分类下文章数
+     */
+    public function get_blog_count($category_id)
+    {
+        if ($category_id) {
+            $condition['category_id'] = $category_id;
+            return $this->db->where($condition)->count_all(self::TBL_ARTICLE);
+        } else {
+            return $this->db->count_all(self::TBL_ARTICLE);
+        }
+    }
+
 
 }
