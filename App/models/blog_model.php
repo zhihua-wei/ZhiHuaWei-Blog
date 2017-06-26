@@ -19,6 +19,8 @@ class Blog_model extends CI_Model
 
     /**
      * 函数：获取文章分类下文章数
+     * @param int $category_id 分类id
+     * @return int
      */
     public function get_blog_count($category_id)
     {
