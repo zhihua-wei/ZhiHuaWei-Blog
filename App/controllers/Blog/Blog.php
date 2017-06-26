@@ -26,6 +26,7 @@ class Blog extends Home_Controller
         $data = $this->homeData;
 
         var_dump($id);
+        exit;
 
         //配置分页信息
         $config['base_url'] = site_url('Weiadmin/Blog/index/');
