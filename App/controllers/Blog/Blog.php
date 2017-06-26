@@ -21,10 +21,9 @@ class Blog extends Home_Controller
         $this->load->library('Blogpage', 'page');
     }
 
-    public function index($offset = '')
+    public function index($id, $offset = '')
     {
         $data = $this->homeData;
-
         //配置分页信息
         $config['base_url'] = site_url('Weiadmin/Blog/index/');
         $config['total_rows'] = $this->admin->get_log_count($this->ADMINISTRSTORS['admin_id']);
