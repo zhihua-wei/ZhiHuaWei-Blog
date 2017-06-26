@@ -17,8 +17,8 @@ class Blog extends Home_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('blog_model', 'admin');
-        $this->load->library('Blogpage', 'page');
+        //$this->load->model('blog_model', 'admin');
+        //$this->load->library('Blogpage', 'page');
     }
 
     public function test(){
@@ -34,14 +34,14 @@ class Blog extends Home_Controller
         exit;
 
         //配置分页信息
-        $config['base_url'] = site_url('Weiadmin/Blog/index/');
-        $config['total_rows'] = $this->admin->get_log_count($this->ADMINISTRSTORS['admin_id']);
-        $config['per_page'] = 10;
-        //初始化分类页
-        $this->pagination->initialize($config);
-        //生成分页信息
-        $data['pageinfo'] = $this->pagination->create_links();
-        $data['admin_log'] = $this->admin->get_admin_log_list($this->ADMINISTRSTORS['admin_id'], $config['per_page'], $offset);
-        $this->load->view('admin.html', $data);
+//        $config['base_url'] = site_url('Weiadmin/Blog/index/');
+//        $config['total_rows'] = $this->admin->get_log_count($this->ADMINISTRSTORS['admin_id']);
+//        $config['per_page'] = 10;
+//        //初始化分类页
+//        $this->pagination->initialize($config);
+//        //生成分页信息
+//        $data['pageinfo'] = $this->pagination->create_links();
+//        $data['admin_log'] = $this->admin->get_admin_log_list($this->ADMINISTRSTORS['admin_id'], $config['per_page'], $offset);
+//        $this->load->view('admin.html', $data);
     }
 }
