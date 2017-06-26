@@ -24,13 +24,4 @@ class Home extends Home_Controller
         $this->load->view('index.html', $data);
     }
 
-    public function test()
-    {
-
-        echo 11115555111;
-
-        //$this -> load -> view('welcome.html');
-
-    }
-
 }
