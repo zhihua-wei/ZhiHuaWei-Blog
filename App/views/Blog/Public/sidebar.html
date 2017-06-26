@@ -25,7 +25,7 @@
             </li>
             <?php foreach($menu as $item):?>
             <li>
-                <a href="blog-1.html"><?php echo $item['category_name'];?></a>
+                <a href="<?php echo site_url('Weiadmin/Blog/index').'/id/'.$item['category_id'];?>"><?php echo $item['category_name'];?></a>
             </li>
             <?php endforeach;?>
             <li>
