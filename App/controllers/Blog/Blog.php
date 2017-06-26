@@ -34,6 +34,10 @@ class Blog extends Home_Controller
         $config['base_url'] = site_url('Blog/Blog/index/') . $id . "/";
         $config['total_rows'] = $this->blog->get_blog_count($id);
         $config['per_page'] = 10;
+
+        var_dump($config);
+        exit;
+
 //        //初始化分类页
 //        $this->pagination->initialize($config);
 //        //生成分页信息
