@@ -21,7 +21,8 @@ class Blog extends Home_Controller
         //$this->load->library('Blogpage', 'page');
     }
 
-    public function test(){
+    public function test()
+    {
         echo 1111;
         exit;
     }
@@ -35,9 +36,9 @@ class Blog extends Home_Controller
         exit;
 
         //配置分页信息
-//        $config['base_url'] = site_url('Weiadmin/Blog/index/');
-//        $config['total_rows'] = $this->admin->get_log_count($this->ADMINISTRSTORS['admin_id']);
-//        $config['per_page'] = 10;
+        $config['base_url'] = site_url('Blog/Blog/index/') . $id . "/";
+        $config['total_rows'] = $this->admin->get_log_count($this->ADMINISTRSTORS['admin_id']);
+        $config['per_page'] = 10;
 //        //初始化分类页
 //        $this->pagination->initialize($config);
 //        //生成分页信息
