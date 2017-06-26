@@ -14,6 +14,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Blog extends Home_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('login_model', 'admin');
+        $this->load->library('pagination');
+    }
+
     public function index($offset = '')
     {
         $data = $this->homeData;
