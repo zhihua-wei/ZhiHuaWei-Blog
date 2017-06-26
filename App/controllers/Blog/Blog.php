@@ -21,6 +21,11 @@ class Blog extends Home_Controller
         $this->load->library('Blogpage', 'page');
     }
 
+    public function test(){
+        echo 1111;
+        exit;
+    }
+
     public function index($id, $offset = '')
     {
         $data = $this->homeData;
