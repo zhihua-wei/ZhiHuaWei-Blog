@@ -22,7 +22,7 @@ class Blog_model extends CI_Model
      * @param int $category_id 分类id
      * @return int
      */
-    public function get_blog_count($category_id)
+    public function get_blog_count($category_id = 0)
     {
         if ($category_id) {
             $condition['category_id'] = $category_id;
