@@ -41,7 +41,12 @@ class Blog_model extends CI_Model
      */
     public function get_blog_list($category_id = null, $limit, $offset)
     {
-
+        if ($category_id) {
+            $condition['category_id'] = $category_id;
+            return $this->db->where($condition)->order_by('article_id', 'DESC')->limit($limit, $offset)->get(self::TBL_ARTICLE)->result_array();
+        } else {
+            return $this->db->order_by('article_id', 'DESC')->limit($limit, $offset)->get(self::TBL_ARTICLE)->result_array();
+        }
     }
 
 
