@@ -36,7 +36,6 @@ class Blog extends Home_Controller
         $config['per_page'] = 10;
 
 
-
         var_dump($config);
         exit;
 
