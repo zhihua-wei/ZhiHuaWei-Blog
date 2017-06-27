@@ -41,6 +41,7 @@ class Blog_model extends CI_Model
      */
     public function get_blog_list($category_id = null, $limit, $offset)
     {
+
     }
 
 
