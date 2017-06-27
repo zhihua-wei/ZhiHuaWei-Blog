@@ -24,8 +24,6 @@ class Blog_model extends CI_Model
      */
     public function get_blog_count($category_id)
     {
-
-
         if ($category_id) {
             $condition['category_id'] = $category_id;
             return $this->db->where($condition)->count_all_results(self::TBL_ARTICLE);
