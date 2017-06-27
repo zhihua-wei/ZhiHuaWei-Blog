@@ -46,7 +46,7 @@ class CI_Blogpage
     //分页方法自动检测你 URI 的哪一段包含页数，如果你的情况不一样，你可以明确指定它
     protected $uri_segment = 4;
     //起始标签放在所有结果的左侧。
-    protected $full_tag_open = '<ul class="pagination pagination-sm">';
+    protected $full_tag_open = '<ul class="pf_categories">';
     //结束标签放在所有结果的右侧。
     protected $full_tag_close = '</ul>';
     //第一个链接的起始标签。
