@@ -28,8 +28,6 @@ class Blog_model extends CI_Model
 
         if ($category_id) {
             $condition['category_id'] = $category_id;
-            var_dump($condition);
-            exit;
             return $this->db->where($condition)->count_all_results(self::TBL_ARTICLE);
         } else {
             return $this->db->count_all(self::TBL_ARTICLE);
