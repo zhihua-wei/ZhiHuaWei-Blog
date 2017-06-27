@@ -39,6 +39,10 @@ class Blog extends Home_Controller
         $this->page->initialize($config);
         //生成分页信息
         $data['pageinfo'] = $this->page->create_links();
+
+        var_dump($data['pageinfo']);
+        exit;
+
         $data['admin_log'] = $this->blog->get_blog_list($id, $config['per_page'], $offset);
         $this->load->view('bloglist.html', $data);
     }
