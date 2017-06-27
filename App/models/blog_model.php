@@ -32,5 +32,16 @@ class Blog_model extends CI_Model
         }
     }
 
+    /**
+     * 函数：获取博客列表
+     * @param int $admin_id 管理员id
+     * @param int $limit 每页显示数
+     * @param int $offset 偏移量
+     * @return array 操作日志列表
+     */
+    public function get_blog_list($category_id = null, $limit, $offset)
+    {
+    }
+
 
 }
