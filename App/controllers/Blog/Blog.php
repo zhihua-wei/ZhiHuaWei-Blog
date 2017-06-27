@@ -32,6 +32,10 @@ class Blog extends Home_Controller
         $data = $this->homeData;
         //配置分页信息
         $config['base_url'] = site_url('Blog/Blog/index/') . $id . "/";
+
+        var_dump($id);
+        exit;
+
         $config['total_rows'] = $this->blog->get_blog_count($id);
         $config['per_page'] = 10;
         var_dump($config);
