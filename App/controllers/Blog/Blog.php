@@ -35,6 +35,7 @@ class Blog extends Home_Controller
         $config['total_rows'] = $this->blog->get_blog_count($id);
         $config['per_page'] = 10;
 
+
         var_dump($config);
         exit;
 
