@@ -24,11 +24,12 @@ class Blog_model extends CI_Model
      */
     public function get_blog_count($category_id)
     {
-        var_dump($category_id);
-        exit;
+
 
         if ($category_id) {
             $condition['category_id'] = $category_id;
+            var_dump($condition);
+            exit;
             return $this->db->where($condition)->count_all(self::TBL_ARTICLE);
         } else {
             return $this->db->count_all(self::TBL_ARTICLE);
