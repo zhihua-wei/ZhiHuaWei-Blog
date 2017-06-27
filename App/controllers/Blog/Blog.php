@@ -18,7 +18,7 @@ class Blog extends Home_Controller
     {
         parent::__construct();
         $this->load->model('blog_model', 'blog');
-        $this->load->library('blogpage', 'page');
+        $this->load->library('blogpage');
     }
 
     public function test()
@@ -36,9 +36,9 @@ class Blog extends Home_Controller
         $config['per_page'] = 10;
 
         //初始化分类页
-        $this->page->initialize($config);
+        $this->blogpage->initialize($config);
         //生成分页信息
-        $data['pageinfo'] = $this->page->create_links();
+        $data['pageinfo'] = $this->blogpage->create_links();
 
         var_dump($data['pageinfo']);
         exit;
