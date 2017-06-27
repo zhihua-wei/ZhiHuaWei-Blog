@@ -34,14 +34,12 @@ class Blog extends Home_Controller
         $config['base_url'] = site_url('Blog/Blog/index/') . $id . "/";
         $config['total_rows'] = $this->blog->get_blog_count($id);
         $config['per_page'] = 10;
-        var_dump($config);
-        exit;
 
-//        //初始化分类页
-//        $this->pagination->initialize($config);
-//        //生成分页信息
-//        $data['pageinfo'] = $this->pagination->create_links();
-//        $data['admin_log'] = $this->admin->get_admin_log_list($this->ADMINISTRSTORS['admin_id'], $config['per_page'], $offset);
-//        $this->load->view('admin.html', $data);
+        //初始化分类页
+        $this->page->initialize($config);
+        //生成分页信息
+        $data['pageinfo'] = $this->page->create_links();
+        $data['admin_log'] = $this->blog->get_blog_list($this->ADMINISTRSTORS['admin_id'], $config['per_page'], $offset);
+        $this->load->view('admin.html', $data);
     }
 }
