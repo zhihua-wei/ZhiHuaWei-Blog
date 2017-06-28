@@ -46,12 +46,13 @@
                     </div>
                     <div class="blog-small-text">
                         <h1><a href="post.html"><?php echo $item['article_title'];?></a></h1>
-                        <p class="blog-info">&nbsp;<img src="<?php echo base_url('Public/Blog/images/icon-time.png');?>" alt="" />
+                        <p class="blog-info">&nbsp;
+                            <img src="<?php echo base_url('Public/Blog/images/icon-time.png');?>" alt="发布时间" />
                             &nbsp;<?php echo date("Y/m/d",$item['issue_time']);?>&nbsp;
-                            <img src="<?php echo base_url('Public/Blog/images/sep.gif');?>" alt="" />&nbsp;&nbsp;
+                            <img src="<?php echo base_url('Public/Blog/images/sep.gif');?>" alt="间隔符" />&nbsp;&nbsp;
                             <img src="<?php echo base_url('Public/Blog/images/icon-category.png');?>" alt="" />
-                            <a href="#">News</a>, <a href="#">Travel</a>&nbsp;&nbsp;
-                            <img src="<?php echo base_url('Public/Blog/images/sep.gif');?>" alt="" />&nbsp;&nbsp;
+                            &nbsp;<?php echo $item['keywords'];?>&nbsp;
+                            <img src="<?php echo base_url('Public/Blog/images/sep.gif');?>" alt="间隔符" />&nbsp;&nbsp;
                             <img src="<?php echo base_url('Public/Blog/images/icon-comment.png');?>" alt="" />&nbsp;0 Comment(s)
                         </p>
                         <p class="blog-small-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel enim sem, in vulputate augue. Praesent vitae velit convallis sapien varius accumsan sit amet eu lacus.  <br /><a href="post.html" class="read_more">Continue reading &rarr;</a></p>
