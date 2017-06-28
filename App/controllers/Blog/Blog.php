@@ -33,7 +33,7 @@ class Blog extends Home_Controller
         //配置分页信息
         $config['base_url'] = site_url('Blog/Blog/index/') . $id . "/";
         $config['total_rows'] = $this->blog->get_blog_count();
-        $config['per_page'] = 2;
+        $config['per_page'] = 1;
 
         //初始化分类页
         $this->blogpage->initialize($config);
