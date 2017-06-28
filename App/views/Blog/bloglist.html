@@ -50,10 +50,11 @@
                             <img src="<?php echo base_url('Public/Blog/images/icon-time.png');?>" alt="发布时间" />
                             &nbsp;<?php echo date("Y/m/d",$item['issue_time']);?>&nbsp;
                             <img src="<?php echo base_url('Public/Blog/images/sep.gif');?>" alt="间隔符" />&nbsp;&nbsp;
-                            <img src="<?php echo base_url('Public/Blog/images/icon-category.png');?>" alt="" />
+                            <img src="<?php echo base_url('Public/Blog/images/icon-category.png');?>" alt="标签" />
                             &nbsp;<?php echo $item['keywords'];?>&nbsp;
                             <img src="<?php echo base_url('Public/Blog/images/sep.gif');?>" alt="间隔符" />&nbsp;&nbsp;
-                            <img src="<?php echo base_url('Public/Blog/images/icon-comment.png');?>" alt="" />&nbsp;0 Comment(s)
+                            <img src="<?php echo base_url('Public/Blog/images/icon-comment.png');?>" alt="" />
+                            &nbsp;<?php echo $item['click_num'];?> Comment(s)
                         </p>
                         <p class="blog-small-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel enim sem, in vulputate augue. Praesent vitae velit convallis sapien varius accumsan sit amet eu lacus.  <br /><a href="post.html" class="read_more">Continue reading &rarr;</a></p>
                     </div>
