@@ -33,6 +33,17 @@ class Blog_model extends CI_Model
     }
 
     /**
+     * 函数：获取文章分类信息
+     * @param int $category_id 分类id
+     * @return array 分类信息
+     */
+    public function get_category_info($category_id)
+    {
+        $condition['category_id'] = $category_id;
+        return $this->db->where($condition)->get(self::TBL_CATEGORY)->row_array();
+    }
+
+    /**
      * 函数：获取博客列表
      * @param int $category_id 分类id
      * @param int $limit 每页显示数
@@ -48,6 +59,7 @@ class Blog_model extends CI_Model
             return $this->db->order_by('article_id', 'DESC')->limit($limit, $offset)->get(self::TBL_ARTICLE)->result_array();
         }
     }
+
 
 
 }
