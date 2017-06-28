@@ -30,9 +30,10 @@ class Blog extends Home_Controller
 
     public function index($id, $offset = '')
     {
-        var_dump($id);
-        var_dump($offset);
-        exit;
+        //var_dump($id);
+        //var_dump($offset);
+        //exit;
+
 
         $data = $this->homeData;
         //配置分页信息
