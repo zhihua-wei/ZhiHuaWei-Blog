@@ -32,7 +32,7 @@ class Blog extends Home_Controller
         $data = $this->homeData;
         //配置分页信息
         $config['base_url'] = site_url('Blog/Blog/index/') . $id . "/";
-        $config['total_rows'] = $this->blog->get_blog_count($id);
+        $config['total_rows'] = $this->blog->get_blog_count();
         $config['per_page'] = 10;
 
         //初始化分类页
@@ -40,7 +40,7 @@ class Blog extends Home_Controller
         //生成分页信息
         $data['pageinfo'] = $this->blogpage->create_links();
         $data['category'] = $this->blog->get_category_info($id);
-        $data['bloglist'] = $this->blog->get_blog_list($id, $config['per_page'], $offset);
+        $data['bloglist'] = $this->blog->get_blog_list(0, $config['per_page'], $offset);
 
         $this->load->view('bloglist.html', $data);
     }
