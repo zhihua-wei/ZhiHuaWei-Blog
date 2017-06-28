@@ -16,6 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Blog_model extends CI_Model
 {
     const TBL_ARTICLE = 'blog_article';
+    const TBL_CATEGORY = 'category';
 
     /**
      * 函数：获取文章分类下文章数
