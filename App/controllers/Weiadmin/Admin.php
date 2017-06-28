@@ -32,7 +32,6 @@ class Admin extends Wei_Controller
         //删除三十天前的日志记录
         $t = time() - 3600 * 24 * 30;
         $this->admin->del_month_ago_log($t);
-
         //配置分页信息
         $config['base_url'] = site_url('Weiadmin/Admin/index/');
         $config['total_rows'] = $this->admin->get_log_count($this->ADMINISTRSTORS['admin_id']);
