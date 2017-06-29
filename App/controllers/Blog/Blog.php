@@ -68,5 +68,6 @@ class Blog extends Home_Controller
     public function comment()
     {
         //进行评论提交
+
     }
 }
