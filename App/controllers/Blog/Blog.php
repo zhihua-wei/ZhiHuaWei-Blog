@@ -41,6 +41,7 @@ class Blog extends Home_Controller
         $config['total_rows'] = $this->blog->get_blog_count();
         $config['per_page'] = 2;
 
+
         //初始化分类页
         $this->blogpage->initialize($config);
         //生成分页信息
@@ -50,4 +51,8 @@ class Blog extends Home_Controller
 
         $this->load->view('bloglist.html', $data);
     }
+
+    /**
+     * 详情
+     */
 }
