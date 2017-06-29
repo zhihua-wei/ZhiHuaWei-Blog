@@ -63,6 +63,6 @@ class Blog extends Home_Controller
     }
 
     /**
-     *
+     * 评论提交
      */
 }
