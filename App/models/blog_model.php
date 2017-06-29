@@ -61,6 +61,10 @@ class Blog_model extends CI_Model
         }
     }
 
+    /**
+     * 获取详细详细
+     */
+
 
 
 }
