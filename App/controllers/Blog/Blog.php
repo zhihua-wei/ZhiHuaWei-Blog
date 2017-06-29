@@ -21,8 +21,6 @@ class Blog extends Home_Controller
         $this->load->library('blogpage');
         $this->load->library('pagination');
     }
-
-
     public function index($id, $offset = '')
     {
         //var_dump($id);
