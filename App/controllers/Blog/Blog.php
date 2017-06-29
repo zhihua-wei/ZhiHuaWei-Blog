@@ -64,6 +64,7 @@ class Blog extends Home_Controller
 
     /**
      * 评论提交
+     * 使用ajax提交尝试
      */
     public function comment()
     {
