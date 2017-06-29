@@ -59,5 +59,7 @@ class Blog extends Home_Controller
     {
         //获取详情信息
 
+        //
+
     }
 }
