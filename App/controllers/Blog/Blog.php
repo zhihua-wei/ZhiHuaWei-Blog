@@ -58,5 +58,6 @@ class Blog extends Home_Controller
     public function blogdetail($id)
     {
         //获取详情信息
+
     }
 }
