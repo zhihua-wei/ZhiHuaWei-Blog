@@ -22,11 +22,6 @@ class Blog extends Home_Controller
         $this->load->library('pagination');
     }
 
-    public function test()
-    {
-        echo 1111;
-        exit;
-    }
 
     public function index($id, $offset = '')
     {
