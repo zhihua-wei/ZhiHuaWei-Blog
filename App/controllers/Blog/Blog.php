@@ -44,7 +44,6 @@ class Blog extends Home_Controller
         $data['pageinfo'] = $this->blogpage->create_links();
         $data['category'] = $this->blog->get_category_info($id);
         $data['bloglist'] = $this->blog->get_blog_list(0, $config['per_page'], $offset);
-
         $this->load->view('bloglist.html', $data);
     }
 
