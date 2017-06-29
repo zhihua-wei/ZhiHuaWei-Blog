@@ -70,4 +70,8 @@ class Blog extends Home_Controller
     {
         //进行评论提交
     }
+
+    /**
+     *
+     */
 }
