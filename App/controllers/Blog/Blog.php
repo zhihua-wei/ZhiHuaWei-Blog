@@ -55,5 +55,5 @@ class Blog extends Home_Controller
     /**
      * 详情
      */
-    public
+    public function blogdetail
 }
