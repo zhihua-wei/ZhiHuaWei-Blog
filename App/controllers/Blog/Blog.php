@@ -24,8 +24,8 @@ class Blog extends Home_Controller
 
     public function index($id, $offset = '')
     {
-        //var_dump($id);
-        //var_dump($offset);
+        var_dump($id);
+        var_dump($offset);
 
         //exit;
         $data = $this->homeData;
