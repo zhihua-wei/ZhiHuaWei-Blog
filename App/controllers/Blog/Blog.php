@@ -35,7 +35,6 @@ class Blog extends Home_Controller
         $config['per_page'] = 3;
         //var_dump($config);
         //exit;
-
         //初始化分类页
         $this->blogpage->initialize($config);
         //生成分页信息
