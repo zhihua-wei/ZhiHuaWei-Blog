@@ -45,7 +45,6 @@ class Blog extends Home_Controller
 
         var_dump($data['pageinfo']);
 
-
         exit;
 
         $data['category'] = $this->blog->get_category_info($id);
