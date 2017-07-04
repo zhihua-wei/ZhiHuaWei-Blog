@@ -42,7 +42,6 @@ class Blog extends Home_Controller
         $data['pageinfo'] = $this->blogpage->create_links();
 
 
-
         var_dump($data['pageinfo']);
         exit;
 
