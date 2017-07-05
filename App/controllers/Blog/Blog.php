@@ -25,8 +25,19 @@ class Blog extends Home_Controller
 
     public function index($id, $offset = '')
     {
+
+        //配置分页信息
+        $config['base_url'] = site_url('Weiadmin/Admin/index/');
+        $config['total_rows'] = $this->admin->get_log_count($this->ADMINISTRSTORS['admin_id']);
+        $config['per_page'] = 10;
+        //初始化分类页
+        $this->pagination->initialize($config);
+        //生成分页信息
+        $data['pageinfo'] = $this->pagination->create_links();
+
         var_dump($id);
-        var_dump($offset);
+        var_dump($data['pageinfo']);
+        exit;
 
         //exit;
         $data = $this->homeData;
