@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * 用于生成分页连接
  */
-class CI_Pagination {
+class CI_Blogpage {
 
     //每次访问的url地址
     protected $base_url = '';
