@@ -31,9 +31,9 @@ class Blog extends Home_Controller
         $config['total_rows'] = $this->admin->get_log_count(1);
         $config['per_page'] = 10;
         //初始化分类页
-        $this->pagination->initialize($config);
+        $this->blogpage->initialize($config);
         //生成分页信息
-        $data['pageinfo'] = $this->pagination->create_links();
+        $data['pageinfo'] = $this->blogpage->create_links();
 
         var_dump($id);
         var_dump($data['pageinfo']);
