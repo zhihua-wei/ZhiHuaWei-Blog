@@ -18,6 +18,7 @@ class Blog extends Home_Controller
     {
         parent::__construct();
         $this->load->model('blog_model', 'blog');
+        $this->load->model('login_model', 'admin');
         $this->load->library('blogpage');
         $this->load->library('pagination');
     }
