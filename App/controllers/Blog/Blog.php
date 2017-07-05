@@ -25,7 +25,6 @@ class Blog extends Home_Controller
 
     public function index($id = '', $offset = '')
     {
-
         //配置分页信息
         $config['base_url'] = site_url("Blog/Blog/index/");
         $config['total_rows'] = $this->admin->get_log_count(1);
