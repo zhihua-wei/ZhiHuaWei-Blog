@@ -42,7 +42,6 @@ class Blog extends Home_Controller
         //不知道怎么弄的
         //有点没有动力
         //不想做事情
-        //这个还是不说了
         //exit;
         $data = $this->homeData;
         //配置分页信息
