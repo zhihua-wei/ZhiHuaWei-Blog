@@ -42,7 +42,7 @@ class Blog extends Home_Controller
         //不知道怎么弄的
         //有点没有动力
         //不想做事情
-        //
+        //买车了
 
         //exit;
         $data = $this->homeData;
