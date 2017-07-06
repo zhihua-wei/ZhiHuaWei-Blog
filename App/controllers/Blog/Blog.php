@@ -38,7 +38,6 @@ class Blog extends Home_Controller
         var_dump($data['pageinfo']);
         exit;
 
-        //今天不想写
 
         //exit;
         $data = $this->homeData;
