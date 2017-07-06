@@ -39,6 +39,7 @@ class Blog extends Home_Controller
         exit;
 
         //今天不想写
+        //
 
         //exit;
         $data = $this->homeData;
