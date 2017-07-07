@@ -37,6 +37,7 @@ class Blog extends Home_Controller
         var_dump($id);
         var_dump($data['pageinfo']);
         exit;
+
         //exit;
         $data = $this->homeData;
         //配置分页信息
