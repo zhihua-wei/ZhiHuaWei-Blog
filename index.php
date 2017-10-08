@@ -188,7 +188,7 @@ if (defined('STDIN')) {
 	chdir(dirname(__FILE__));
 }
 
-echo date("Y-m-d H:i:s", strtotime("-1 year"));
+echo date("Y-m-d H:i:s", strtotime("1 year"));
 exit;
 
 if (($_temp = realpath($system_path)) !== FALSE) {
