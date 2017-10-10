@@ -32,7 +32,6 @@ class Blog extends Home_Controller
         //初始化分类页
         $this->pagination->initialize($config);
 
-
         //生成分页信息
         $data['pageinfo'] = $this->pagination->create_links();
 
