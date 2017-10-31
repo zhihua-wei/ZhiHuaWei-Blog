@@ -36,7 +36,6 @@ class Blog extends Home_Controller
 
 
 
-
         var_dump($id);
         var_dump($data['pageinfo']);
         exit;
