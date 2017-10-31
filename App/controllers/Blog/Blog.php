@@ -35,21 +35,7 @@ class Blog extends Home_Controller
         $data['pageinfo'] = $this->pagination->create_links();
 
 
-        //从数据库获取富文本string
-        $string = $data["content"];
-        //把一些预定义的 HTML 实体转换为字符
-        $html_string = htmlspecialchars_decode($string);
-        //将空格替换成空
-        $content = str_replace("&nbsp;", "", $html_string);
-        //函数剥去字符串中的 HTML、XML 以及 PHP 的标签,获取纯文本内容
-        $contents = strip_tags($content);
 
-        //返回字符串中的前80字符串长度的字符
-        $text = mb_substr($contents, 0, 80, "utf-8");
-
-        //打印输出
-        var_dump($text);
-        exit;
 
 
         var_dump($id);
